@@ -23,14 +23,13 @@ export default function sitemap() {
 
   const projectRoutes = PROJECTS.map((project) => ({
     url: `${SITE.url}/projects/${project.slug}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
   const blogRoutes = BLOG_POSTS.map((post) => ({
     url: `${SITE.url}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: post.date,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
@@ -38,7 +37,6 @@ export default function sitemap() {
   return [
     ...staticRoutes.map((route) => ({
       url: `${SITE.url}${route}`,
-      lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: route === "" ? 1 : 0.7,
     })),

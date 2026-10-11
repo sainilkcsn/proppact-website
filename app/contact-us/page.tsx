@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   description: `Get in touch with PropPact for residential & commercial property inquiries in ${SITE.city}. Call, email, or visit our office — we're here to help.`,
   alternates: { canonical: `${SITE.url}/contact-us` },
   openGraph: {
+    url: `${SITE.url}/contact-us`,
     title: `Contact PropPact | Real Estate Experts in ${SITE.city}`,
     description: `Reach PropPact for property inquiries in ${SITE.city}.`,
     images: [{ url: "/images/contact-office.jpg" }],

@@ -25,11 +25,6 @@ export function OrganizationJsonLd() {
         url: SITE.url,
         name: SITE.name,
         publisher: { "@id": `${SITE.url}/#organization` },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SITE.url}/residential-properties`,
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": ["RealEstateAgent", "LocalBusiness"],

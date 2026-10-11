@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "PropPact's terms and conditions governing use of our website and real estate services.",
   alternates: { canonical: `${SITE.url}/terms-and-conditions` },
   openGraph: {
+    url: `${SITE.url}/terms-and-conditions`,
     title: "Terms & Conditions | PropPact",
     description: "Terms governing use of the PropPact website and services.",
   },

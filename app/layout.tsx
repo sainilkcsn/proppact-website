@@ -26,9 +26,6 @@ export const metadata: Metadata = {
     template: `%s | PropPact`,
   },
   description: SITE.description,
-  alternates: {
-    canonical: SITE.url,
-  },
   openGraph: {
     type: "website",
     locale: "en_IN",

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: `From property search to loans, legal checks and registration — PropPact offers end-to-end real estate services for buyers, sellers & investors in ${SITE.city}.`,
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
+    url: `${SITE.url}/services`,
     title: `Real Estate Services in ${SITE.city} | PropPact`,
     description: `End-to-end real estate services for buyers, sellers & investors in ${SITE.city}.`,
     images: [{ url: "/images/services.jpg" }],

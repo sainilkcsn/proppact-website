@@ -54,6 +54,26 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const related = getRelatedPosts(post.slug, 3);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${SITE.url}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${SITE.url}/blog/${post.slug}`,
+      },
+    ],
+  };
+
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -79,6 +99,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article>

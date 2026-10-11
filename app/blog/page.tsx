@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: `Property buying guides, ${SITE.city} real estate market trends, legal checklists and investment tips from the PropPact team.`,
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: {
+    url: `${SITE.url}/blog`,
     title: `PropPact Blog | ${SITE.city} Real Estate Resources`,
     description: `Guides, market updates and investment tips for ${SITE.city}.`,
     images: [{ url: "/images/blog-property.jpg" }],

@@ -23,6 +23,7 @@ export function generateMetadata({ params }: ProjectPageProps): Metadata {
     description,
     alternates: { canonical: `${SITE.url}/projects/${project.slug}` },
     openGraph: {
+      url: `${SITE.url}/projects/${project.slug}`,
       title: `${title} | PropPact`,
       description,
       images: [{ url: project.coverImage }],

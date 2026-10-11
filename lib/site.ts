@@ -26,7 +26,7 @@ export const SITE = {
   longitude: 77.491127,
   whatsappUrl:
     "https://wa.me/919560959762?text=Hello%20PropPact%2C%20I%20would%20like%20information%20about%20properties%20in%20Greater%20Noida%20West.",
-  url: "https://proppact.co.in",
+  url: "https://www.proppact.co.in",
 } as const;
 
 export type NavItem = {

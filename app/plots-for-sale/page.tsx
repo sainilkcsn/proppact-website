@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: `${SITE.url}/${category.slug}` },
   openGraph: {
+    url: `${SITE.url}/${category.slug}`,
     title: `Plots in ${SITE.city} | PropPact`,
     description,
     images: [{ url: category.heroImage }],

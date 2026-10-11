@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: `Read what buyers, sellers and investors say about their experience working with PropPact for residential and commercial property in ${SITE.city}.`,
   alternates: { canonical: `${SITE.url}/testimonials` },
   openGraph: {
+    url: `${SITE.url}/testimonials`,
     title: `Client Testimonials | PropPact ${SITE.city}`,
     description: `Buyer, seller and investor experiences with PropPact.`,
     images: [{ url: "/images/testimonials.jpg" }],

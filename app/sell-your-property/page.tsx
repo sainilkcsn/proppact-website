@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   description: `Tell PropPact about a property you want to sell in ${SITE.city}. The team will follow up using the contact details you provide.`,
   alternates: { canonical: `${SITE.url}/sell-your-property` },
   openGraph: {
+    url: `${SITE.url}/sell-your-property`,
     title: `Sell Your Property in ${SITE.city} | PropPact`,
     description: `Sell your flat, villa, plot or commercial property faster with PropPact.`,
     images: [{ url: "/images/sell-property.jpg" }],

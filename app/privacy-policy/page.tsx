@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Read PropPact's privacy policy to understand how we collect, use, and protect your personal information.",
   alternates: { canonical: `${SITE.url}/privacy-policy` },
   openGraph: {
+    url: `${SITE.url}/privacy-policy`,
     title: "Privacy Policy | PropPact",
     description: "How PropPact collects, uses, and protects personal information.",
   },

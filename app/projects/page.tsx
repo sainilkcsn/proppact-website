@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Selected residential projects in Greater Noida West. Enquire with PropPact for current pricing, charges and availability.",
   alternates: { canonical: `${SITE.url}/projects` },
   openGraph: {
+    url: `${SITE.url}/projects`,
     title: `Projects in ${SITE.city} | PropPact`,
     description:
       "Vista Homez, Madhav Kunj, Yuvraj Villa and Rudransh Urban Vista.",

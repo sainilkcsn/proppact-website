@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: `Learn about PropPact's mission, team, and why buyers and sellers across ${SITE.city} trust us for residential and commercial property transactions.`,
   alternates: { canonical: `${SITE.url}/about-us` },
   openGraph: {
+    url: `${SITE.url}/about-us`,
     title: `About PropPact | ${SITE.city}`,
     description: `Mission, values and team behind PropPact.`,
     images: [{ url: "/images/about-hero.jpg" }],

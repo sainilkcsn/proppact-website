@@ -42,6 +42,7 @@ export function generateMetadata({ params }: PropertyPageProps): Metadata {
       canonical: `${SITE.url}/property/${property.slug}`,
     },
     openGraph: {
+      url: `${SITE.url}/property/${property.slug}`,
       title: `${title} | PropPact`,
       description,
       images: [{ url: property.image }],

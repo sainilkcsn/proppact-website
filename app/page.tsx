@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: SITE.description,
   alternates: { canonical: SITE.url },
   openGraph: {
+    url: SITE.url,
     title: `PropPact | Residential Projects in ${SITE.city}`,
     description: SITE.description,
     images: [{ url: "/images/hero-home.jpg" }],
