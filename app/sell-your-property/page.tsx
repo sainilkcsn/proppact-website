@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-import { SellerLeadForm } from "@/components/forms/SellerLeadForm";
+import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { CTASection } from "@/components/sections/CTASection";
 import { PageHero } from "@/components/sections/PageHero";
 import { ButtonLink } from "@/components/ui/Button";
@@ -17,7 +17,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `Sell Your Property in ${SITE.city}`,
-  description: `Sell your flat, villa, plot or commercial property faster with PropPact. Free property valuation, verified buyer network, and end-to-end support.`,
+  description: `Tell PropPact about a property you want to sell in ${SITE.city}. The team will follow up using the contact details you provide.`,
   alternates: { canonical: `${SITE.url}/sell-your-property` },
   openGraph: {
     title: `Sell Your Property in ${SITE.city} | PropPact`,
@@ -35,7 +35,7 @@ const whySell = [
   {
     title: "Serious buyer network",
     description:
-      "Access to pre-verified buyers and investors — not just listing views.",
+      "Share your property and the team will follow up with buyers they are already speaking with.",
     icon: Users,
   },
   {
@@ -51,9 +51,9 @@ const whySell = [
     icon: Handshake,
   },
   {
-    title: "Verified documentation focus",
+    title: "Documentation discussed with you",
     description:
-      "Clear ownership and documentation checks help protect a safer closing.",
+      "Ownership and paperwork questions are reviewed with you. This page does not confirm a completed legal check.",
     icon: ShieldCheck,
   },
 ];
@@ -75,7 +75,7 @@ const howItWorks = [
     step: "03",
     title: "Marketing & Buyer Matching",
     description:
-      "We list it to our verified buyer/investor network and coordinate serious site visits.",
+      "We share it with buyers the team is already speaking with and coordinate site visits you approve.",
   },
   {
     step: "04",
@@ -200,9 +200,7 @@ export default function SellPropertyPage() {
               Selling Process
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Selling through PropPact means access to serious, pre-verified
-              buyers — not just listing views — and a team that manages the
-              process from valuation to final registration.
+              Selling through PropPact starts with the details you share. The team follows up on pricing, visits and paperwork. Buyer verification is not claimed on this page.
             </p>
             <ul className="mt-6 space-y-3">
               {processNotes.map((note) => (
@@ -219,7 +217,13 @@ export default function SellPropertyPage() {
               List My Property
             </ButtonLink>
           </div>
-          <SellerLeadForm />
+          <LeadCaptureForm
+            id="seller-form"
+            title="Tell us about the property"
+            sourcePath="/sell-your-property"
+            enquiryType="seller"
+            variant="seller"
+          />
         </Container>
       </section>
 
@@ -229,9 +233,9 @@ export default function SellPropertyPage() {
             Why PropPact
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            PropPact combines verified listings, transparent pricing guidance,
-            and hands-on support so sellers in {SITE.city} can move from
-            valuation to closing with clarity.
+            PropPact follows up on seller enquiries in {SITE.city} using the
+            contact details you provide. Current pricing is discussed with the
+            team and is not calculated on this page.
           </p>
         </Container>
       </section>

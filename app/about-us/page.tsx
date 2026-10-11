@@ -29,7 +29,7 @@ const values = [
   },
   {
     title: "Integrity",
-    description: "every property is verified before it's listed",
+    description: "pricing and availability are confirmed with the team before you rely on them",
   },
   {
     title: "Client-first",
@@ -71,7 +71,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="Who We Are"
-        description={`PropPact was founded with a simple belief: buying or selling property shouldn't be stressful, confusing, or risky. We are a ${SITE.city}-based real estate consultancy specializing in residential and commercial property sales — flats, villas, plots, and commercial spaces — built on transparency, verified documentation, and honest advice.`}
+        description={`PropPact is a ${SITE.city} property advisory. The published project pages use material supplied for Vista Homez, Madhav Kunj, Yuvraj Villa and Rudransh Urban Vista. Current prices and availability are confirmed with the team.`}
         imageSrc="/images/about-hero.jpg"
         imageAlt={`PropPact real estate consultants serving ${SITE.city}`}
       />
@@ -92,9 +92,7 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              To simplify property buying and selling in {SITE.city} by
-              combining verified listings, transparent pricing, and hands-on
-              guidance — from the first site visit to final registration.
+              To help buyers and sellers in {SITE.city} understand the projects we discuss, including the figures in the supplied material, and to confirm current pricing before a decision.
             </p>
           </div>
         </Container>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
-  Clock3,
   Facebook,
   Instagram,
   Linkedin,
@@ -10,7 +9,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
-import { ContactForm } from "@/components/forms/ContactForm";
+import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { SITE, SOCIAL_LINKS } from "@/lib/site";
@@ -48,7 +47,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Get in Touch with PropPact"
-        description={`Have a question about a listing, want a free property valuation, or ready to start your property search in ${SITE.city}? Reach out — our team typically responds within 24 hours.`}
+        description={`Have a question about a project in ${SITE.city}? Call, email or send an enquiry. The team will follow up using the details you provide.`}
         imageSrc="/images/contact-office.jpg"
         imageAlt={`Contact PropPact office in ${SITE.city}`}
       />
@@ -71,7 +70,7 @@ export default function ContactPage() {
                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <a href={`tel:${SITE.phone}`} className="hover:text-primary">
+                  <a href={SITE.phoneHref} className="hover:text-primary">
                     {SITE.phone}
                   </a>
                 </div>
@@ -80,17 +79,20 @@ export default function ContactPage() {
                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <a href={`mailto:${SITE.email}`} className="hover:text-primary">
+                  <a href={SITE.emailHref} className="hover:text-primary">
                     {SITE.email}
                   </a>
                 </div>
               </li>
               <li className="flex gap-3">
-                <Clock3 className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
-                <div>
-                  <p className="font-medium text-foreground">Working Hours</p>
-                  <p>{SITE.hours}</p>
-                </div>
+                <a
+                  href={SITE.whatsappUrl}
+                  className="text-sm font-medium text-primary hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp {SITE.phone}
+                </a>
               </li>
             </ul>
 
@@ -118,14 +120,26 @@ export default function ContactPage() {
             </div>
 
             <div className="overflow-hidden rounded-lg border border-border bg-muted">
-              <div className="flex aspect-[16/9] items-center justify-center px-6 text-center text-sm text-muted-foreground">
-                Google Map placeholder — add the verified PropPact office map
-                embed for {SITE.city} when coordinates are confirmed.
+              <div className="flex aspect-[16/9] flex-col items-center justify-center gap-3 px-6 text-center text-sm text-muted-foreground">
+                <p>Office location on Google Maps</p>
+                <a
+                  href={SITE.mapsUrl}
+                  className="font-medium text-primary underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open the PropPact office map
+                </a>
               </div>
             </div>
           </div>
 
-          <ContactForm />
+          <LeadCaptureForm
+            title="Send a message"
+            sourcePath="/contact-us"
+            enquiryType="general"
+            description="Share what you are looking for. Current prices and availability are confirmed by the team."
+          />
         </Container>
       </section>
     </>

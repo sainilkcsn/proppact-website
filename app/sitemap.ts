@@ -1,11 +1,12 @@
 import { SITE } from "@/lib/site";
-import { PROPERTIES } from "@/lib/property-data";
+import { PROJECTS } from "@/lib/projects-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export default function sitemap() {
   const staticRoutes = [
     "",
     "/about-us",
+    "/projects",
     "/residential-properties",
     "/villas-for-sale",
     "/plots-for-sale",
@@ -20,8 +21,8 @@ export default function sitemap() {
     "/terms-and-conditions",
   ];
 
-  const propertyRoutes = PROPERTIES.map((property) => ({
-    url: `${SITE.url}/property/${property.slug}`,
+  const projectRoutes = PROJECTS.map((project) => ({
+    url: `${SITE.url}/projects/${project.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.8,
@@ -41,7 +42,7 @@ export default function sitemap() {
       changeFrequency: "weekly" as const,
       priority: route === "" ? 1 : 0.7,
     })),
-    ...propertyRoutes,
+    ...projectRoutes,
     ...blogRoutes,
   ];
 }

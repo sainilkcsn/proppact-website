@@ -50,14 +50,34 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-accent" aria-hidden />
-                <a href={`tel:${SITE.phone}`} className="hover:text-primary">
+                <a href={SITE.phoneHref} className="hover:text-primary">
                   {SITE.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-accent" aria-hidden />
-                <a href={`mailto:${SITE.email}`} className="hover:text-primary">
+                <a href={SITE.emailHref} className="hover:text-primary">
                   {SITE.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SITE.mapsUrl}
+                  className="hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open office map
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SITE.whatsappUrl}
+                  className="hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
                 </a>
               </li>
             </ul>

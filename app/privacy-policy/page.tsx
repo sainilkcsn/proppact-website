@@ -22,31 +22,15 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Information We Collect",
-    body: `We may collect personal information you provide through our website forms and communications, including your name, phone number, email address, and property preferences. We may also collect limited technical information such as browser type and pages visited to improve site performance.`,
+    body: `If you send an enquiry through this website, we collect the details you submit, such as your name, phone number, email address if you provide one, the project or property you ask about, and your message. We also store the page the form was sent from so the team can see what you were viewing.`,
   },
   {
     title: "How We Use Your Information",
-    body: `We use your information to respond to inquiries, contact leads about property opportunities, schedule site visits, and send relevant updates about listings or services when you have requested them.`,
-  },
-  {
-    title: "Sharing With Third Parties",
-    body: `We may share necessary details with trusted partners such as legal advisors or lending partners only when required to fulfill a service you requested. We do not sell personal information.`,
-  },
-  {
-    title: "Cookies",
-    body: `Our website may use cookies or similar technologies to remember preferences and understand how visitors use the site. You can control cookies through your browser settings.`,
-  },
-  {
-    title: "Data Retention",
-    body: `We retain personal information only for as long as needed to provide our services, meet legal obligations, or resolve disputes.`,
-  },
-  {
-    title: "Your Rights",
-    body: `You may request access, correction, or deletion of your personal information by contacting us at ${SITE.email}. We will respond within a reasonable timeframe.`,
+    body: `PropPact uses those details to respond to your enquiry and to follow up on the property interest you described. We do not publish enquiry records on the website.`,
   },
   {
     title: "Contact",
-    body: `For privacy-related requests, contact PropPact at ${SITE.email} or ${SITE.phone}. This policy is a template and should be reviewed by a lawyer before publishing.`,
+    body: `For privacy questions about an enquiry, contact PropPact at ${SITE.email} or ${SITE.phone}. Office address: ${SITE.address}.`,
   },
 ];
 

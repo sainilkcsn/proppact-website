@@ -35,6 +35,7 @@ export function generateMetadata({ params }: PropertyPageProps): Metadata {
   const description = `${property.title} in ${property.locality}, ${property.city}. ${property.priceLabel} · Demo listing for PropPact property discovery.`;
 
   return {
+    robots: { index: false, follow: false },
     title,
     description,
     alternates: {
@@ -90,6 +91,10 @@ export default function PropertyDetailPage({ params }: PropertyPageProps) {
 
       <section className="border-b border-border bg-background py-6">
         <Container>
+          <p className="mb-4 rounded-md border border-secondary/30 bg-secondary/10 px-4 py-3 text-sm text-foreground">
+            Demonstration listing for interface development. This is not a live
+            PropPact project or a confirmed unit for sale.
+          </p>
           <Breadcrumbs
             tone="onLight"
             items={[

@@ -10,7 +10,7 @@ type CTASectionProps = {
 
 export function CTASection({
   title = "Talk to a Property Expert",
-  description = "Browse live listings or speak with our team for verified options, site visits, and end-to-end support.",
+  description = "Ask the PropPact team about projects in Greater Noida West, pricing guidance and site visits.",
   ctaLabel = "Get in Touch",
   ctaHref = "/contact-us",
 }: CTASectionProps) {

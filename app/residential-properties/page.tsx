@@ -1,27 +1,35 @@
 import type { Metadata } from "next";
-import { CategoryPageTemplate } from "@/components/property/CategoryPageTemplate";
+import { ProjectListing } from "@/components/projects/ProjectListing";
 import { PROPERTY_CATEGORY_CONFIGS } from "@/lib/property-categories";
-import { getPropertiesByCategory } from "@/lib/property-data";
+import { getProjectsByCategory } from "@/lib/projects-data";
 import { SITE } from "@/lib/site";
 
 const category = PROPERTY_CATEGORY_CONFIGS.residential;
+const description =
+  "Selected apartment projects in Greater Noida West that PropPact can discuss. Figures on each project page come from supplied material and must be reconfirmed.";
 
 export const metadata: Metadata = {
-  title: category.seo.title,
-  description: category.seo.description,
+  title: `Apartment projects in ${SITE.city}`,
+  description,
   alternates: { canonical: `${SITE.url}/${category.slug}` },
   openGraph: {
-    title: `${category.seo.title} | PropPact`,
-    description: category.seo.description,
+    title: `Apartment projects in ${SITE.city} | PropPact`,
+    description,
     images: [{ url: category.heroImage }],
   },
 };
 
 export default function ResidentialPropertiesPage() {
   return (
-    <CategoryPageTemplate
-      category={category}
-      properties={getPropertiesByCategory("residential")}
+    <ProjectListing
+      title={`Apartment projects in ${SITE.city}`}
+      description={description}
+      imageSrc={category.heroImage}
+      imageAlt={category.heroAlt}
+      breadcrumbLabel="Residential"
+      projects={getProjectsByCategory("residential")}
+      emptyTitle="No apartment projects published"
+      emptyDescription="Contact PropPact to ask about residential projects in Greater Noida West."
     />
   );
 }

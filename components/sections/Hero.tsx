@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -13,6 +14,8 @@ import {
 } from "@/lib/site";
 
 export function Hero() {
+  const router = useRouter();
+
   return (
     <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden">
       <Image
@@ -39,12 +42,10 @@ export function Hero() {
             Find Your Perfect Property in {SITE.city} with PropPact
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-            Buying property is one of the biggest decisions you&apos;ll make —
-            PropPact makes it simple. We help buyers and investors in{" "}
-            {SITE.city} discover verified residential and commercial properties,
-            from ready-to-move flats and luxury villas to open plots and
-            commercial spaces, all backed by transparent pricing and end-to-end
-            support.
+            Explore residential apartments, duplex villas and selected
+            residential projects across Greater Noida West. Get project
+            information, available configurations and pricing guidance from the
+            PropPact team.
           </p>
         </motion.div>
 
@@ -53,7 +54,19 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
           className="mt-10 max-w-4xl rounded-lg bg-background p-4 shadow-soft sm:p-5"
-          onSubmit={(event) => event.preventDefault()}
+          onSubmit={(event) => {
+            event.preventDefault();
+            const data = new FormData(event.currentTarget);
+            const params = new URLSearchParams();
+            const type = String(data.get("propertyType") || "");
+            const budget = String(data.get("budget") || "");
+            const locality = String(data.get("locality") || "");
+            if (type) params.set("type", type);
+            if (budget) params.set("budget", budget);
+            if (locality) params.set("locality", locality);
+            const query = params.toString();
+            router.push(query ? `/projects?${query}` : "/projects");
+          }}
           aria-label="Property search"
         >
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1.2fr_1.2fr_1.2fr_auto]">
@@ -104,7 +117,7 @@ export function Hero() {
 
             <Button type="submit" size="lg" className="w-full lg:w-auto">
               <Search className="h-4 w-4" aria-hidden />
-              Search
+              Search Properties
             </Button>
           </div>
         </motion.form>

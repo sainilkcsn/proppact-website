@@ -21,10 +21,10 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `PropPact | Residential & Commercial Property for Sale in ${SITE.city}`,
+    default: `PropPact | Residential Projects in ${SITE.city}`,
     template: `%s | PropPact`,
   },
-  description: `Find verified flats, villas, plots & commercial spaces for sale in ${SITE.city} with PropPact. Trusted local experts, transparent deals, zero brokerage hassle.`,
+  description: SITE.description,
   alternates: {
     canonical: SITE.url,
   },
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE.url,
     siteName: SITE.name,
-    title: `PropPact | Residential & Commercial Property for Sale in ${SITE.city}`,
-    description: `Find verified flats, villas, plots & commercial spaces for sale in ${SITE.city} with PropPact.`,
+    title: `PropPact | Residential Projects in ${SITE.city}`,
+    description: SITE.description,
     images: [{ url: "/images/hero-home.jpg", alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `PropPact | Property for Sale in ${SITE.city}`,
-    description: `Verified residential & commercial property with PropPact.`,
+    title: `PropPact | Property in ${SITE.city}`,
+    description: SITE.description,
     images: ["/images/hero-home.jpg"],
   },
 };

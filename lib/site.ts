@@ -1,14 +1,22 @@
 export const SITE = {
   name: "PropPact",
-  city: "[City]",
-  tagline: "Trusted local experts for residential & commercial property",
+  city: "Greater Noida West",
+  tagline: "Property discovery and advisory in Greater Noida West",
   description:
-    "PropPact helps buyers and investors discover verified residential and commercial properties with transparent pricing and end-to-end support.",
-  phone: "[Phone]",
-  email: "[Email]",
-  address: "[Address]",
-  hours: "[Hours]",
-  url: "https://proppact.com",
+    "PropPact helps buyers explore residential apartments, duplex villas and selected residential projects in Greater Noida West. Current pricing and availability are confirmed with the team.",
+  phone: "+91 95609 59762",
+  phoneE164: "+919560959762",
+  phoneHref: "tel:+919560959762",
+  email: "support@proppact.co.in",
+  emailHref: "mailto:support@proppact.co.in",
+  address:
+    "Yuvraj Villa, Vaidpura, Sector 10, Greater Noida West, Uttar Pradesh",
+  mapsUrl: "https://maps.google.com/?q=28.580778,77.491127",
+  latitude: 28.580778,
+  longitude: 77.491127,
+  whatsappUrl:
+    "https://wa.me/919560959762?text=Hello%20PropPact%2C%20I%20would%20like%20to%20enquire%20about%20a%20property%20in%20Greater%20Noida%20West.",
+  url: "https://proppact.co.in",
 } as const;
 
 export type NavItem = {
@@ -32,6 +40,7 @@ export const MAIN_NAV: NavItem[] = [
 ];
 
 export const BUY_PROPERTY_LINKS: NavItem[] = [
+  { label: "Featured Projects", href: "/projects" },
   { label: "Residential Properties", href: "/residential-properties" },
   { label: "Villas for Sale", href: "/villas-for-sale" },
   { label: "Plots & Land", href: "/plots-for-sale" },
@@ -117,9 +126,9 @@ export type WhyChooseItem = {
 
 export const WHY_CHOOSE: WhyChooseItem[] = [
   {
-    title: "Verified Listings",
+    title: "Local Project Information",
     description:
-      "Verified listings with clear ownership and legal documentation",
+      "Project details drawn from supplied material, with current price and availability confirmed by the team",
     icon: "shield",
   },
   {
@@ -308,11 +317,10 @@ export const BUDGET_OPTIONS = [
 
 export const LOCALITY_OPTIONS = [
   { value: "", label: "Locality" },
-  { value: "sector-62", label: "Sector 62" },
-  { value: "sector-137", label: "Sector 137" },
-  { value: "sector-150", label: "Sector 150" },
+  { value: "techzone-7", label: "Techzone-7" },
+  { value: "sector-10", label: "Sector 10" },
+  { value: "vaidpura", label: "Vaidpura" },
   { value: "greater-noida-west", label: "Greater Noida West" },
-  { value: "yamuna-expressway", label: "Yamuna Expressway" },
 ] as const;
 
 export type FaqItem = {
@@ -324,7 +332,7 @@ export const FAQS: FaqItem[] = [
   {
     question: "Are PropPact's listings verified?",
     answer:
-      "Yes. Every property listed goes through document and ownership verification before it appears on our site.",
+      "Published project pages use details from material supplied to PropPact. They are not a live inventory feed. Ask the team to confirm current price, charges and availability before you rely on a figure.",
   },
   {
     question: "Does PropPact charge brokerage from buyers?",
@@ -348,7 +356,8 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: `Which areas in ${SITE.city} does PropPact cover?`,
-    answer: "[List specific localities/sectors you serve.]",
+    answer:
+      "The projects currently published on this website are in Techzone-7, Sector 10 and Vaidpura, Greater Noida West.",
   },
 ];
 
