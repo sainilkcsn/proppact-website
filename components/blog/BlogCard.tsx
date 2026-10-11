@@ -13,7 +13,7 @@ export function BlogCard({ post }: BlogCardProps) {
         <div className="relative aspect-[16/10]">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={post.imageAlt ?? post.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"

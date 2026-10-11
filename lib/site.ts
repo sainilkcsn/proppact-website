@@ -413,6 +413,14 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-to-choose-right-property-to-buy",
+    title:
+      "How to Choose the Right Property to Buy: Flat, Villa, Plot or Commercial in Greater Noida West",
+    excerpt:
+      "Compare flats, villas, plots and commercial spaces in Greater Noida West before you decide what to buy.",
+    image: "/images/blog-property.jpg",
+  },
+  {
     slug: "documents-checklist-buying-flat",
     title: `Documents Checklist Before Buying a Flat in ${SITE.city}`,
     excerpt:

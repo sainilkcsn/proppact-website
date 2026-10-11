@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { BlogContent } from "@/components/blog/BlogContent";
 import { CTASection } from "@/components/sections/CTASection";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
@@ -24,20 +25,25 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: BlogPostPageProps): Metadata {
   const post = getBlogPost(params.slug);
   if (!post) return { title: "Article Not Found" };
+  const title = post.seoTitle ?? post.title;
+  const description = post.seoDescription ?? post.excerpt;
+  const canonical = `${SITE.url}/blog/${post.slug}`;
   return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: { canonical: `${SITE.url}/blog/${post.slug}` },
+    title: post.seoTitle ? { absolute: post.seoTitle } : post.title,
+    description,
+    alternates: { canonical },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: [{ url: post.image }],
+      title,
+      description,
+      url: canonical,
+      images: [{ url: post.image, alt: post.imageAlt ?? post.title }],
       type: "article",
+      publishedTime: post.date,
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description,
     },
   };
 }
@@ -52,9 +58,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
+    description: post.seoDescription ?? post.excerpt,
     datePublished: post.date,
     image: `${SITE.url}${post.image}`,
+    mainEntityOfPage: `${SITE.url}/blog/${post.slug}`,
+    url: `${SITE.url}/blog/${post.slug}`,
     author: {
       "@type": "Organization",
       name: SITE.name,
@@ -77,7 +85,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="relative h-64 w-full sm:h-80">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={post.imageAlt ?? post.title}
             fill
             priority
             sizes="100vw"
@@ -102,11 +110,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         <Container className="py-12 sm:py-16">
-          <div className="mx-auto max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            {post.content.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-            ))}
-          </div>
+          {post.blocks ? (
+            <BlogContent blocks={post.blocks} />
+          ) : (
+            <div className="mx-auto max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              {post.content.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
+          )}
 
           <div className="mx-auto mt-10 max-w-3xl">
             <Link
