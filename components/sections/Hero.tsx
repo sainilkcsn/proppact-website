@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import {
   BUDGET_OPTIONS,
@@ -47,6 +48,12 @@ export function Hero() {
             information, available configurations and pricing guidance from the
             PropPact team.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <ButtonLink href="/projects" variant="onDark" size="lg">
+              Explore Projects
+            </ButtonLink>
+            <ContactCTA action="call" size="lg" variant="onDarkOutline" />
+          </div>
         </motion.div>
 
         <motion.form

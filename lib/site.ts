@@ -1,3 +1,11 @@
+export function whatsappHref(message: string) {
+  return `https://wa.me/919560959762?text=${encodeURIComponent(message)}`;
+}
+
+export function projectWhatsappMessage(projectName: string) {
+  return `Hello PropPact, I would like information about ${projectName} in Greater Noida West.`;
+}
+
 export const SITE = {
   name: "PropPact",
   city: "Greater Noida West",
@@ -12,10 +20,12 @@ export const SITE = {
   address:
     "Yuvraj Villa, Vaidpura, Sector 10, Greater Noida West, Uttar Pradesh",
   mapsUrl: "https://maps.google.com/?q=28.580778,77.491127",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=28.580778,77.491127&z=15&output=embed",
   latitude: 28.580778,
   longitude: 77.491127,
   whatsappUrl:
-    "https://wa.me/919560959762?text=Hello%20PropPact%2C%20I%20would%20like%20to%20enquire%20about%20a%20property%20in%20Greater%20Noida%20West.",
+    "https://wa.me/919560959762?text=Hello%20PropPact%2C%20I%20would%20like%20information%20about%20properties%20in%20Greater%20Noida%20West.",
   url: "https://proppact.co.in",
 } as const;
 

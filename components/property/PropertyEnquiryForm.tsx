@@ -11,7 +11,7 @@ export function PropertyEnquiryForm({ property }: PropertyEnquiryFormProps) {
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <LeadCaptureForm
           title="Enquire about this demonstration listing"
-          description="This page is sample interface data, not a live PropPact listing. The form still records an enquiry when lead storage is configured."
+          description="This page is sample interface data, not a live PropPact listing. The form still sends the property title and slug through the website enquiry path when lead storage is configured."
           sourcePath={`/property/${property.slug}`}
           enquiryType="property"
           propertySlug={property.slug}

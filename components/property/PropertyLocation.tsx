@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import type { Property } from "@/lib/property-data";
 
@@ -17,11 +18,12 @@ export function PropertyLocation({ property }: PropertyLocationProps) {
           <MapPin className="h-4 w-4 text-accent" aria-hidden />
           {property.locality}, {property.city}
         </p>
-        <div className="mt-6 overflow-hidden rounded-lg border border-border bg-muted">
-          <div className="flex aspect-[16/7] items-center justify-center px-6 text-center text-sm text-muted-foreground">
-            Map placeholder for {property.locality}, {property.city}. Connect a
-            map embed when verified coordinates are available.
-          </div>
+        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+          This demonstration listing does not have verified coordinates, so no map pin is shown.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <ContactCTA action="enquire" href="#enquire" />
+          <ContactCTA action="call" />
         </div>
       </Container>
     </section>

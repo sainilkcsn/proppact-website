@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import type { Project } from "@/lib/projects-data";
 
 type ProjectCardProps = {
@@ -45,16 +46,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.priceLabel}
         </p>
         <div className="mt-auto flex flex-wrap gap-2 pt-2">
-          <ButtonLink href={`/projects/${project.slug}`} size="sm">
+          <ButtonLink href={`/projects/${project.slug}`} size="sm" variant="outline">
             View Project
           </ButtonLink>
-          <ButtonLink
+          <ContactCTA
+            action="enquire"
             href={`/projects/${project.slug}#enquire`}
             size="sm"
-            variant="outline"
-          >
-            Enquire Now
-          </ButtonLink>
+          />
         </div>
       </div>
     </article>

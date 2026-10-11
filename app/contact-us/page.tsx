@@ -10,7 +10,9 @@ import {
   Twitter,
 } from "lucide-react";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
+import { OfficeMap } from "@/components/maps/OfficeMap";
 import { PageHero } from "@/components/sections/PageHero";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import { SITE, SOCIAL_LINKS } from "@/lib/site";
 
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Contact PropPact | ${SITE.city}`,
-    description: `Call, email, or visit PropPact — responses typically within 24 hours.`,
+    description: `Call, email, or visit PropPact in ${SITE.city}.`,
   },
 };
 
@@ -109,6 +111,13 @@ export default function ContactPage() {
               ))}
             </div>
 
+            <div className="flex flex-wrap gap-3">
+              <ContactCTA action="call" />
+              <ContactCTA action="email" />
+              <ContactCTA action="whatsapp" />
+              <ContactCTA action="enquire" href="#enquire" />
+            </div>
+
             <div className="relative mt-2 aspect-[16/10] overflow-hidden rounded-lg border border-border">
               <Image
                 src="/images/contact-office.jpg"
@@ -119,19 +128,7 @@ export default function ContactPage() {
               />
             </div>
 
-            <div className="overflow-hidden rounded-lg border border-border bg-muted">
-              <div className="flex aspect-[16/9] flex-col items-center justify-center gap-3 px-6 text-center text-sm text-muted-foreground">
-                <p>Office location on Google Maps</p>
-                <a
-                  href={SITE.mapsUrl}
-                  className="font-medium text-primary underline-offset-2 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open the PropPact office map
-                </a>
-              </div>
-            </div>
+            <OfficeMap />
           </div>
 
           <LeadCaptureForm

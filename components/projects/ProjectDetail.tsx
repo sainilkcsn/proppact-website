@@ -4,11 +4,12 @@ import { MapPin } from "lucide-react";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { ButtonLink } from "@/components/ui/Button";
+import { OfficeMap } from "@/components/maps/OfficeMap";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import type { Project } from "@/lib/projects-data";
 import { getSimilarProjects } from "@/lib/projects-data";
-import { SITE } from "@/lib/site";
+import { SITE, projectWhatsappMessage } from "@/lib/site";
 
 type ProjectDetailProps = {
   project: Project;
@@ -91,15 +92,26 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
             <p className="mt-2 text-sm text-muted-foreground">{project.priceInformation}</p>
             <p className="mt-2 text-sm text-muted-foreground">{project.availabilityLabel}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href={`/projects/${project.slug}#enquire`}>
-                Request Current Price
-              </ButtonLink>
-              <ButtonLink
+              <ContactCTA action="enquire" href={`/projects/${project.slug}#enquire`} />
+              <ContactCTA action="call" />
+              <ContactCTA
+                action="enquire"
                 href={`/projects/${project.slug}?intent=site-visit#enquire`}
+                label="Request a Site Visit"
                 variant="outline"
-              >
-                Schedule a Site Visit
-              </ButtonLink>
+              />
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              A site-visit request is an enquiry. The team will confirm the arrangements separately.
+            </p>
+            <div className="mt-3">
+              <ContactCTA
+                action="whatsapp"
+                whatsappMessage={projectWhatsappMessage(project.name)}
+                label={`WhatsApp about ${project.name}`}
+                size="sm"
+                variant="ghost"
+              />
             </div>
           </div>
         </Container>
@@ -187,6 +199,16 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
                 Location
               </h2>
               <p className="mt-3 text-muted-foreground">{project.address}</p>
+              {project.verifiedOfficePin ? (
+                <div className="mt-4">
+                  <OfficeMap />
+                </div>
+              ) : (
+                <p className="mt-3 text-sm text-muted-foreground">
+                  A map pin is shown only when this project&apos;s coordinates have been verified.
+                  The address above is the location stated in the supplied material.
+                </p>
+              )}
               <p className="mt-3">
                 <Link
                   href={project.mapUrl}

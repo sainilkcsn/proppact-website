@@ -131,7 +131,8 @@ export function LeadCaptureForm({
     return (
       <div
         id={id}
-        className="scroll-mt-28 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
+        data-enquiry-complete=""
+        className="scroll-mt-28 scroll-mb-28 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
         role="status"
       >
         <h2 className="font-heading text-2xl font-semibold text-primary">
@@ -159,7 +160,7 @@ export function LeadCaptureForm({
     <form
       id={id}
       onSubmit={handleSubmit(onSubmit)}
-      className="scroll-mt-28 space-y-4 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
+      className="scroll-mt-28 scroll-mb-28 space-y-4 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
       noValidate
     >
       <div>
@@ -182,23 +183,28 @@ export function LeadCaptureForm({
       </div>
 
       {allowSiteVisit ? (
-        <Field label="Enquiry type" error={errors.enquiryType?.message}>
-          <select className={inputClass} {...register("enquiryType")}>
-            <option value="project">Request current price</option>
-            <option value="site_visit">Schedule a site visit</option>
-          </select>
-        </Field>
+        <>
+          <Field label="Enquiry type" error={errors.enquiryType?.message}>
+            <select className={inputClass} {...register("enquiryType")}>
+              <option value="project">Project enquiry</option>
+              <option value="site_visit">Request a site visit</option>
+            </select>
+          </Field>
+          <p className="text-sm text-muted-foreground">
+            A site-visit request is an enquiry. The team will confirm the arrangements separately. Submitting this form does not confirm an appointment.
+          </p>
+        </>
       ) : null}
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Name" error={errors.name?.message}>
+        <Field label="Full Name" error={errors.name?.message}>
           <input
             className={inputClass}
             autoComplete="name"
             {...register("name", { required: "Name is required" })}
           />
         </Field>
-        <Field label="Phone" error={errors.phone?.message}>
+        <Field label="Mobile Number" error={errors.phone?.message}>
           <input
             className={inputClass}
             type="tel"

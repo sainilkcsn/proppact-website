@@ -39,6 +39,8 @@ export type Project = {
   developer: string | null;
   marketer: string | null;
   mapUrl: string;
+  /** True only when this project's pin is the verified PropPact office location. */
+  verifiedOfficePin?: boolean;
   availabilityLabel: string;
   featured: boolean;
   enquiryEnabled: boolean;
@@ -208,7 +210,8 @@ export const PROJECTS: Project[] = [
     },
     developer: null,
     marketer: null,
-    mapUrl: mapsSearch("Vaidpura, Sector 10, Greater Noida West"),
+    mapUrl: SITE.mapsUrl,
+    verifiedOfficePin: true,
     availabilityLabel: "Availability must be confirmed with PropPact",
     featured: true,
     enquiryEnabled: true,

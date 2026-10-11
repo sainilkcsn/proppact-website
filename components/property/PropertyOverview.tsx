@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
-import { ButtonLink } from "@/components/ui/Button";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 import {
   PROPERTY_STATUS_LABEL,
   formatArea,
@@ -65,9 +65,10 @@ export function PropertyOverview({ property }: PropertyOverviewProps) {
         ))}
       </dl>
 
-      <ButtonLink href="#enquire" className="mt-6 w-full" size="lg">
-        Enquire Now
-      </ButtonLink>
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <ContactCTA action="enquire" href="#enquire" className="w-full sm:w-auto" />
+        <ContactCTA action="call" className="w-full sm:w-auto" />
+      </div>
     </div>
   );
 }

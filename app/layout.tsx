@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MobileContactBar } from "@/components/layout/MobileContactBar";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { SITE } from "@/lib/site";
 import "./globals.css";
@@ -61,8 +62,11 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Header />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="pb-24 min-[900px]:pb-0">
+          {children}
+        </main>
         <Footer />
+        <MobileContactBar />
       </body>
     </html>
   );
