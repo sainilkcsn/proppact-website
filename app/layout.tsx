@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen pb-[calc(4.5rem+env(safe-area-inset-bottom))] font-sans min-[900px]:pb-0">
         <OrganizationJsonLd />
         <a
           href="#main-content"
@@ -62,9 +62,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Header />
-        <main id="main-content" className="pb-24 min-[900px]:pb-0">
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
         <MobileContactBar />
       </body>

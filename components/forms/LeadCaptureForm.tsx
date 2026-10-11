@@ -131,8 +131,9 @@ export function LeadCaptureForm({
     return (
       <div
         id={id}
+        tabIndex={-1}
         data-enquiry-complete=""
-        className="scroll-mt-28 scroll-mb-28 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
+        className="scroll-mt-28 rounded-lg border border-border bg-white p-5 shadow-card outline-none sm:p-6"
         role="status"
       >
         <h2 className="font-heading text-2xl font-semibold text-primary">
@@ -159,8 +160,9 @@ export function LeadCaptureForm({
   return (
     <form
       id={id}
+      tabIndex={-1}
       onSubmit={handleSubmit(onSubmit)}
-      className="scroll-mt-28 scroll-mb-28 space-y-4 rounded-lg border border-border bg-white p-5 shadow-card sm:p-6"
+      className="scroll-mt-28 space-y-4 rounded-lg border border-border bg-white p-5 shadow-card outline-none sm:p-6"
       noValidate
     >
       <div>

@@ -2,56 +2,57 @@
 
 import { useEffect, useState, type MouseEvent } from "react";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Phone } from "lucide-react";
-import { PROJECTS } from "@/lib/projects-data";
-import { SITE, projectWhatsappMessage, whatsappHref } from "@/lib/site";
+import { MessageSquare, Phone } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 export function MobileContactBar() {
   const pathname = usePathname();
   const [hidden, setHidden] = useState(false);
-  const project = PROJECTS.find((item) => pathname === `/projects/${item.slug}`);
-  const whatsapp = project
-    ? whatsappHref(projectWhatsappMessage(project.name))
-    : SITE.whatsappUrl;
 
   useEffect(() => {
-    const footer = document.querySelector("footer");
     const sync = () => {
       const navOpen = document.body.dataset.mobileNav === "open";
-      const formDone = Boolean(document.querySelector("[data-enquiry-complete]"));
-      const footerVisible = footer
-        ? footer.getBoundingClientRect().top < window.innerHeight - 8
-        : false;
-      setHidden(navOpen || formDone || footerVisible);
+      const active = document.activeElement;
+      const typing = isFormField(active);
+      const viewport = window.visualViewport;
+      const keyboardOpen = viewport ? window.innerHeight - viewport.height > 120 : false;
+      setHidden(navOpen || (typing && keyboardOpen));
     };
+
+    const onFocusOut = () => {
+      window.setTimeout(sync, 0);
+    };
+
     sync();
     const observer = new MutationObserver(sync);
     observer.observe(document.body, {
       attributes: true,
-      childList: true,
-      subtree: true,
-      attributeFilter: ["data-mobile-nav", "data-enquiry-complete"],
+      attributeFilter: ["data-mobile-nav"],
     });
-    window.addEventListener("scroll", sync, { passive: true });
-    window.addEventListener("resize", sync);
+    document.addEventListener("focusin", sync);
+    document.addEventListener("focusout", onFocusOut);
+    window.visualViewport?.addEventListener("resize", sync);
+    window.visualViewport?.addEventListener("scroll", sync);
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", sync);
-      window.removeEventListener("resize", sync);
+      document.removeEventListener("focusin", sync);
+      document.removeEventListener("focusout", onFocusOut);
+      window.visualViewport?.removeEventListener("resize", sync);
+      window.visualViewport?.removeEventListener("scroll", sync);
     };
-  }, [pathname]);
+  }, []);
 
   if (hidden) return null;
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-3 py-2 shadow-[0_-8px_24px_rgba(0,60,0,0.08)] min-[900px]:hidden"
-      style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background px-3 pt-3 shadow-[0_-4px_16px_rgba(0,60,0,0.06)] min-[900px]:hidden"
+      style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
     >
-      <div className="mx-auto grid max-w-lg grid-cols-3 gap-2">
+      <div className="mx-auto grid max-w-lg grid-cols-2 gap-3">
         <a
           href={SITE.phoneHref}
-          className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-md border border-primary px-2 text-sm font-medium text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-primary bg-transparent text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
           <Phone className="h-4 w-4" aria-hidden />
           Call Now
@@ -59,31 +60,29 @@ export function MobileContactBar() {
         <a
           href={enquiryHref(pathname)}
           onClick={(event) => scrollToEnquiry(event)}
-          className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-md bg-primary px-2 text-sm font-medium text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-primary text-sm font-medium text-primary-foreground transition-colors hover:bg-[#002a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
+          <MessageSquare className="h-4 w-4" aria-hidden />
           Enquire Now
-        </a>
-        <a
-          href={whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-md border border-border bg-white px-2 text-sm font-medium text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-        >
-          <MessageCircle className="h-4 w-4" aria-hidden />
-          WhatsApp
         </a>
       </div>
     </div>
   );
 }
 
+function isFormField(node: Element | null) {
+  return (
+    node instanceof HTMLElement &&
+    Boolean(node.closest("form")) &&
+    node.matches("input, textarea, select")
+  );
+}
+
 function enquiryHref(pathname: string) {
-  if (pathname.startsWith("/projects/") && pathname !== "/projects") {
-    return `${pathname.split("?")[0]}#enquire`;
-  }
-  if (pathname.startsWith("/property/")) return `${pathname}#enquire`;
-  if (pathname === "/sell-your-property") return "/sell-your-property#seller-form";
-  if (pathname === "/contact-us") return "/contact-us#enquire";
+  const path = pathname.split("?")[0];
+  if (path.startsWith("/projects/") && path !== "/projects") return `${path}#enquire`;
+  if (path.startsWith("/property/")) return `${path}#enquire`;
+  if (path === "/sell-your-property") return "/sell-your-property#seller-form";
   return "/contact-us#enquire";
 }
 
@@ -92,6 +91,5 @@ function scrollToEnquiry(event: MouseEvent<HTMLAnchorElement>) {
   if (!target) return;
   event.preventDefault();
   target.scrollIntoView({ behavior: "smooth", block: "start" });
-  const focusable = target.querySelector<HTMLElement>("input, select, textarea");
-  focusable?.focus({ preventScroll: true });
+  target.focus({ preventScroll: true });
 }
