@@ -56,8 +56,305 @@ const r = (text: string, href?: string, strong?: boolean): BlogRun => ({
 const yuvrajMaps = getPropertyMapLinks(getProjectBySlug("yuvraj-villa")!);
 const vistaMaps = getPropertyMapLinks(getProjectBySlug("vista-homez")!);
 const madhavMaps = getPropertyMapLinks(getProjectBySlug("madhav-kunj")!);
+const rudranshMaps = getPropertyMapLinks(getProjectBySlug("rudransh-urban-vista")!);
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "rudransh-urban-vista-greater-noida-west",
+    title:
+      "Rudransh Urban Vista Greater Noida West: A Buyer's Guide to Simplex and Duplex Floors in Sector 10",
+    excerpt:
+      "Explore Rudransh Urban Vista in Sector 10. Compare the listed simplex and duplex floors, and ask PropPact for the current price.",
+    category: "Buying Guides",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
+    image: "/images/projects/rudransh-urban-vista/cover.jpg",
+    imageAlt: "Rudransh Urban Vista simplex and duplex floors in Sector 10, Greater Noida West",
+    seoTitle: "Rudransh Urban Vista Greater Noida West | Simplex & Duplex Floors",
+    seoDescription:
+      "Explore Rudransh Urban Vista in Sector 10, Greater Noida West. Compare simplex and duplex floor configurations, location and buying costs. Enquire with PropPact.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("If you are comparing "),
+          r("residential property in Greater Noida West", "/residential-properties"),
+          r(", "),
+          r("Rudransh Urban Vista", "/projects/rudransh-urban-vista", true),
+          r(" is one project to review. The supplied brochure places it in Sector 10, Greater Noida West, and describes simplex and duplex residential floors."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A configuration name and an area on a price-list artwork are only the starting point. Before you enquire or visit, confirm the plan for the unit, the basis of the area figure, the total amount payable, and whether that unit is currently available."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("At "),
+          r("PropPact", undefined, true),
+          r(", the team can take an enquiry for Rudransh Urban Vista and confirm the current price and availability. This guide sets out what the supplied material says, and what you should check yourself."),
+        ],
+      },
+      { type: "h2", text: "What does the supplied material say?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied brochure identifies Rudransh Urban Vista as a residential project in "),
+          r("Sector 10, Greater Noida West", undefined, true),
+          r(". It attributes development to "),
+          r("Hoon Brothers Infratech Pvt. Ltd.", undefined, true),
+          r(" and marketing to "),
+          r("Wastu Home's", undefined, true),
+          r(". Those names are taken from the brochure. This page does not independently confirm approvals or legal status."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The same material describes simplex and duplex floor configurations. The supplied price-list artwork has no visible effective date. It is not a current quotation."),
+        ],
+      },
+      { type: "h2", text: "How do simplex and duplex floors differ?" },
+      {
+        type: "p",
+        runs: [
+          r("In general, a simplex floor is arranged on one level. A duplex floor is arranged on two levels, often with a staircase between them. Whether that description matches a particular unit at Rudransh Urban Vista depends on the plan you are shown."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A single-level floor can be easier to move around. A two-level floor can separate shared rooms from bedrooms, and it also means stairs. Check the actual staircase, ceiling heights, and how the rooms are split before you treat either type as suitable."),
+        ],
+      },
+      { type: "h2", text: "Which configurations are listed?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied price-list artwork lists these configurations and areas. It does not state whether the areas are carpet area, built-up area, or super built-up area."),
+        ],
+      },
+      {
+        type: "table",
+        headers: ["Type", "Configuration", "Listed area"],
+        rows: [
+          ["Simplex", "2 BHK", "1,050 sq ft"],
+          ["Simplex", "2 BHK + Study", "1,150 sq ft"],
+          ["Simplex", "3 BHK", "1,550 sq ft"],
+          ["Duplex", "2 BHK + Hall", "1,625 sq ft"],
+          ["Duplex", "2 BHK + Hall + Bedroom", "1,775 sq ft"],
+          ["Duplex", "2 BHK + Hall + Study", "1,775 sq ft"],
+          ["Duplex", "3 BHK + Bedroom + Hall", "2,405 sq ft"],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Two duplex options are both listed at 1,775 sq ft: 2 BHK + Hall + Bedroom, and 2 BHK + Hall + Study. Confirm which plan applies to the unit on offer, and ask what the artwork means by hall, study, or an extra bedroom."),
+        ],
+      },
+      { type: "h2", text: "Where is Rudransh Urban Vista?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied brochure gives the location as Sector 10, Greater Noida West. Visit the site and judge the approach roads, daily services, and your own commute at the times you would travel."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The brochure refers to nearby facilities and a proposed or upcoming metro station. Distances, travel times, and an operational metro connection are not confirmed here."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r(rudranshMaps.note ?? "")],
+      },
+      {
+        type: "p",
+        runs: [
+          r(rudranshMaps.viewLabel, rudranshMaps.viewHref),
+          r(" · "),
+          r(rudranshMaps.directionsLabel, rudranshMaps.directionsHref),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("These links search Sector 10, Greater Noida West. They are not a confirmed pin for a building entrance. Confirm the precise destination with PropPact before you rely on a map result."),
+        ],
+      },
+      { type: "h2", text: "What did the undated price-list artwork show?" },
+      {
+        type: "p",
+        runs: [
+          r("Current price: On enquiry", "/projects/rudransh-urban-vista#enquire", true),
+          r(". Contact PropPact for the price payable now, the charges that apply, and availability. The amounts below are from supplied price-list artwork with no visible effective date. They are not verified current quotations, and they should not be read as a ₹48 lakh to ₹80 lakh offer available today."),
+        ],
+      },
+      {
+        type: "table",
+        headers: ["Configuration on the undated artwork", "Amount shown"],
+        rows: [
+          ["Simplex · 2 BHK · 1,050 sq ft", "₹48,00,000"],
+          ["Simplex · 2 BHK + Study · 1,150 sq ft", "₹49,50,000"],
+          ["Simplex · 3 BHK · 1,550 sq ft", "₹61,00,000"],
+          ["Duplex · 2 BHK + Hall · 1,625 sq ft", "₹68,50,000"],
+          ["Duplex · 2 BHK + Hall + Bedroom · 1,775 sq ft", "₹70,50,000"],
+          ["Duplex · 2 BHK + Hall + Study · 1,775 sq ft", "₹70,00,000"],
+          ["Duplex · 3 BHK + Bedroom + Hall · 2,405 sq ft", "₹80,00,000"],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The same undated artwork mentions other charges. Treat each of these as something to confirm on an updated written cost sheet, not as a charge you should add into today's budget:"),
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("A meter charge shown as ₹50,000.")],
+          [r("Advance maintenance shown as ₹20,000 for 2 BHK and ₹30,000 for 3 BHK, described as 1 year.")],
+          [r("Preferential-location figures, including main-road-facing ₹3,00,000, and floor entries for upper-ground, first, and second floors.")],
+          [r("GST shown as 5%. The artwork says prices may change.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Ask for a fresh written breakdown of the selected unit, stamp duty, registration, taxes, and any recurring charges."),
+        ],
+      },
+      { type: "h2", text: "What should you verify before you buy?" },
+      {
+        type: "ul",
+        items: [
+          [r("The floor plan for the selected configuration, including whether it is one level or two, and the basis of the area figure.")],
+          [r("What is included in a written specification, and what appears only on marketing artwork.")],
+          [r("Access, utilities, and the surrounding roads on a visit.")],
+          [r("Title and ownership records.")],
+          [r("Land-use permissions and building approvals that apply.")],
+          [r("Approved plans and any completion or occupancy papers, where they exist.")],
+          [r("Outstanding dues, charges, encumbrances, or disputes.")],
+          [r("The agreement, payment schedule, and possession terms.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("An independent property lawyer can review the title and the proposed papers before you pay a substantial amount. This page does not confirm approvals, a possession date, or current availability."),
+        ],
+      },
+      { type: "h2", text: "Who might consider this project?" },
+      {
+        type: "p",
+        runs: [
+          r("A simplex floor may suit a buyer who wants the listed rooms on one level. A duplex floor may suit a buyer who wants the extra area shown for the two-level options and is comfortable with stairs. Neither type is a fit until the plan, the total cost, and a visit match what you need."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Compare the seven listed options with each other only after you know which unit is actually available and how its area was measured."),
+        ],
+      },
+      { type: "h2", text: "How PropPact can help" },
+      {
+        type: "p",
+        runs: [
+          r("PropPact can take your enquiry, discuss the simplex and duplex options you want to compare, and ask the project side for the current price and availability. The project page remains the place to send that enquiry with Rudransh Urban Vista already selected."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("View Rudransh Urban Vista on PropPact: ", undefined, true),
+          r("https://www.proppact.co.in/projects/rudransh-urban-vista", "/projects/rudransh-urban-vista"),
+        ],
+      },
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "h3", text: "Where is Rudransh Urban Vista?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied brochure places Rudransh Urban Vista in Sector 10, Greater Noida West. A verified building pin is not published here."),
+        ],
+      },
+      { type: "h3", text: "What configurations are listed?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied artwork lists three simplex options, from 1,050 sq ft to 1,550 sq ft, and four duplex options, from 1,625 sq ft to 2,405 sq ft. Confirm the plan and the area basis for the unit on offer."),
+        ],
+      },
+      { type: "h3", text: "What is the Rudransh Urban Vista price?" },
+      {
+        type: "p",
+        runs: [
+          r("The current price is on enquiry. The supplied price-list artwork is undated and is not a verified current quotation. Contact PropPact for the latest price, charges, and availability."),
+        ],
+      },
+      { type: "h3", text: "Who is named as the developer?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied brochure attributes development to Hoon Brothers Infratech Pvt. Ltd. and marketing to Wastu Home's. Confirm that attribution in the project documents."),
+        ],
+      },
+      { type: "h3", text: "How do I enquire or ask for a site visit?" },
+      {
+        type: "p",
+        runs: [
+          r("Use the "),
+          r("Rudransh Urban Vista project page", "/projects/rudransh-urban-vista#enquire"),
+          r(", call or WhatsApp "),
+          r("+91 95609 59762", SITE.phoneHref),
+          r(", or email "),
+          r(SITE.email, SITE.emailHref),
+          r(". A site-visit request is an enquiry. The team confirms the arrangements separately."),
+        ],
+      },
+      { type: "h2", text: "Enquire about Rudransh Urban Vista" },
+      {
+        type: "p",
+        runs: [
+          r("Contact PropPact to enquire about Rudransh Urban Vista.", "/projects/rudransh-urban-vista#enquire", true),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Call / WhatsApp: ", undefined, true),
+          r(SITE.phone, SITE.phoneHref),
+          r(" · "),
+          r("WhatsApp", "https://wa.me/919560959762"),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Email: ", undefined, true), r(SITE.email, SITE.emailHref)],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Project details: ", undefined, true),
+          r("https://www.proppact.co.in/projects/rudransh-urban-vista", "/projects/rudransh-urban-vista"),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: Prices, availability, specifications, and charges can change. Amounts from the undated price-list artwork are not a current offer. This article is general guidance. It is not a guarantee of appreciation, rental income, or a current quotation. Confirm the price, documents, and terms independently before you pay."),
+        ],
+      },
+    ],
+  },
   {
     slug: "madhav-kunj-greater-noida-west",
     title: "Madhav Kunj Greater Noida West: A Buyer's Guide to 2 and 3 BHK Apartments in Techzone 7",

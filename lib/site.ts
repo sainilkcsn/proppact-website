@@ -413,6 +413,14 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "rudransh-urban-vista-greater-noida-west",
+    title:
+      "Rudransh Urban Vista Greater Noida West: A Buyer's Guide to Simplex and Duplex Floors in Sector 10",
+    excerpt:
+      "Explore Rudransh Urban Vista in Sector 10. Compare the listed simplex and duplex floors, and ask PropPact for the current price.",
+    image: "/images/projects/rudransh-urban-vista/cover.jpg",
+  },
+  {
     slug: "madhav-kunj-greater-noida-west",
     title: "Madhav Kunj Greater Noida West: A Buyer's Guide to 2 and 3 BHK Apartments in Techzone 7",
     excerpt:

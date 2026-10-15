@@ -43,6 +43,10 @@ export type Project = {
   verifiedOfficePin?: boolean;
   /** Set only when this project's own coordinates have been verified. */
   verifiedCoordinates?: { latitude: number; longitude: number };
+  /** Locality search used when coordinates are not verified. */
+  mapQuery?: string;
+  /** Link labels for an unverified locality search. */
+  localityMapLabels?: { view: string; directions: string };
   availabilityLabel: string;
   featured: boolean;
   enquiryEnabled: boolean;
@@ -299,7 +303,12 @@ export const PROJECTS: Project[] = [
     },
     developer: "Hoon Brothers Infratech Pvt. Ltd.",
     marketer: "Wastu Home's",
-    mapUrl: mapsSearch("Sector 10, Greater Noida West"),
+    mapUrl: mapsSearch("Sector 10, Greater Noida West, Uttar Pradesh"),
+    mapQuery: "Sector 10, Greater Noida West, Uttar Pradesh",
+    localityMapLabels: {
+      view: "View on Google Maps",
+      directions: "Get Directions",
+    },
     availabilityLabel: "Availability must be confirmed with PropPact",
     featured: true,
     enquiryEnabled: true,
@@ -319,13 +328,15 @@ export function getPropertyMapLinks(project: Project) {
     };
   }
 
+  const destination = project.mapQuery ?? project.address;
   return {
     verifiedPin: false,
     note: "A verified map pin is not available for this project. These links search the locality stated in the supplied material.",
-    viewLabel: "Search the stated locality on Google Maps",
-    directionsLabel: "Get directions to the stated locality",
-    viewHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.address)}`,
-    directionsHref: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(project.address)}`,
+    viewLabel: project.localityMapLabels?.view ?? "Search the stated locality on Google Maps",
+    directionsLabel:
+      project.localityMapLabels?.directions ?? "Get directions to the stated locality",
+    viewHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(destination)}`,
+    directionsHref: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`,
   };
 }
 
