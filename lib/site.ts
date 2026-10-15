@@ -413,6 +413,13 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "madhav-kunj-greater-noida-west",
+    title: "Madhav Kunj Greater Noida West: A Buyer's Guide to 2 and 3 BHK Apartments in Techzone 7",
+    excerpt:
+      "Explore Madhav Kunj in Techzone 7. Compare the listed 2 BHK and 3 BHK sizes, see the May 2025 price guide, and ask PropPact for the current price.",
+    image: "/images/projects/madhav-kunj/cover.jpg",
+  },
+  {
     slug: "vista-homez-greater-noida-west",
     title: "Vista Homez Greater Noida West: A Buyer's Guide to 2 BHK Flats in Techzone 7",
     excerpt:

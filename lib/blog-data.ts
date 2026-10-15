@@ -55,8 +55,267 @@ const r = (text: string, href?: string, strong?: boolean): BlogRun => ({
 
 const yuvrajMaps = getPropertyMapLinks(getProjectBySlug("yuvraj-villa")!);
 const vistaMaps = getPropertyMapLinks(getProjectBySlug("vista-homez")!);
+const madhavMaps = getPropertyMapLinks(getProjectBySlug("madhav-kunj")!);
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "madhav-kunj-greater-noida-west",
+    title: "Madhav Kunj Greater Noida West: A Buyer's Guide to 2 and 3 BHK Apartments in Techzone 7",
+    excerpt:
+      "Explore Madhav Kunj in Techzone 7. Compare the listed 2 BHK and 3 BHK sizes, see the May 2025 price guide, and ask PropPact for the current price.",
+    category: "Buying Guides",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
+    image: "/images/projects/madhav-kunj/cover.jpg",
+    imageAlt: "Madhav Kunj apartments in Techzone 7, Greater Noida West",
+    seoTitle: "Madhav Kunj Greater Noida West | 2 & 3 BHK Apartments",
+    seoDescription:
+      "Explore Madhav Kunj in Techzone 7, Greater Noida West. Compare 2 BHK and 3 BHK configurations, review buying considerations and enquire with PropPact for current prices and availability.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("If you are comparing "),
+          r("flats in Greater Noida West", "/residential-properties"),
+          r(", "),
+          r("Madhav Kunj", "/projects/madhav-kunj", true),
+          r(" is one residential project to review. The supplied price list places it at Techzone 7, Noida Extension, Greater Noida West, and names two apartment configurations."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A configuration name and an area figure are only the starting point. Before you enquire or visit, confirm the plan that applies to the unit, the basis of the area figure, the total amount payable, and whether that unit is currently available."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("At "),
+          r("PropPact", undefined, true),
+          r(", the team can take an enquiry for Madhav Kunj and confirm the current price and availability. This guide sets out what the supplied material says, and what you should check yourself."),
+        ],
+      },
+      { type: "h2", text: "What does the supplied material say about Madhav Kunj?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied price list identifies Madhav Kunj as a residential project and lists two plans:"),
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("2 BHK + 2T — 1,150 sq ft")],
+          [r("3 BHK + 2T — 1,650 sq ft")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The list does not state whether those areas are carpet area, built-up area, or super built-up area. It also does not confirm a possession date, approvals, or which units are available. Ask for the measurement basis and the plan for the unit you are shown."),
+        ],
+      },
+      { type: "h2", text: "What is listed for the 2 BHK + 2T?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied price list names a "),
+          r("2 BHK + 2T of 1,150 sq ft", undefined, true),
+          r(". Treat that label as the configuration in the source document. Confirm how many rooms the plan actually shows, what the two toilets are, and whether a hall, kitchen, balcony, or parking is included in writing for the unit on offer."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Compare the stated area with the plan before you compare this flat with another 2 BHK. Two flats with the same headline area can differ once the measurement method is known."),
+        ],
+      },
+      { type: "h2", text: "What is listed for the 3 BHK + 2T?" },
+      {
+        type: "p",
+        runs: [
+          r("The same list names a "),
+          r("3 BHK + 2T of 1,650 sq ft", undefined, true),
+          r(". Confirm that this description matches the unit you are considering, including room sizes and what is included beyond the configuration name."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The May 2025 price list mentions a corner preferential-location charge for the 3 BHK + 2T. Ask whether that charge, or any other location charge, applies to the unit you are shown, and whether it is still part of the current quotation."),
+        ],
+      },
+      { type: "h2", text: "Where is Madhav Kunj, and how do I open the map?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied price list gives the location as "),
+          r("Techzone 7, Noida Extension, Greater Noida West", undefined, true),
+          r(". Techzone 7 is also written Techzone-7 in that material. Visit the site and judge the approach roads, daily services, and your own commute at the times you would travel."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r(madhavMaps.note ?? "")],
+      },
+      {
+        type: "p",
+        runs: [
+          r(madhavMaps.viewLabel, madhavMaps.viewHref),
+          r(" · "),
+          r(madhavMaps.directionsLabel, madhavMaps.directionsHref),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("These links search the locality stated in the supplied material. They are not a confirmed pin for a particular building. Confirm the precise destination with PropPact before you rely on a map result."),
+        ],
+      },
+      { type: "h2", text: "What should you verify before you buy?" },
+      {
+        type: "ul",
+        items: [
+          [r("The floor plan for the selected configuration, including room arrangement and the basis of the area figure.")],
+          [r("What is included in a written specification, and what is only described in marketing material.")],
+          [r("Access, utilities, and the surrounding roads on a visit.")],
+          [r("Title and ownership records.")],
+          [r("Land-use permissions and building approvals that apply.")],
+          [r("Approved plans and any completion or occupancy papers, where they exist.")],
+          [r("Outstanding dues, charges, encumbrances, or disputes.")],
+          [r("The agreement, payment schedule, and possession terms.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("An independent property lawyer can review the title and the proposed papers before you pay a substantial amount. This page does not confirm approvals, a possession date, or current availability."),
+        ],
+      },
+      { type: "h2", text: "What did the May 2025 price guide say?" },
+      {
+        type: "p",
+        runs: [
+          r("Current price: On enquiry", "/projects/madhav-kunj#enquire", true),
+          r(". Contact PropPact for the price payable now, the charges that apply, and availability. The figures below are from a supplied price list effective 10 May 2025. They are not today's offer."),
+        ],
+      },
+      {
+        type: "table",
+        headers: ["Configuration in the 10 May 2025 list", "Area in that list", "Amount in that list"],
+        rows: [
+          ["2 BHK + 2T", "1,150 sq ft", "₹58,00,000"],
+          ["3 BHK + 2T", "1,650 sq ft", "₹68,00,000"],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The same historical list, before other charges it specified, also recorded:"),
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("Corner preferential-location charge: ₹2,00,000 for 3 BHK + 2T.")],
+          [r("Water, electricity and development charges: ₹85,000.")],
+          [r("GST extra.")],
+          [r("Individual electric meter connection charges extra.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Do not add these historical lines into a current budget. Ask for a fresh written breakdown of the selected unit, stamp duty, registration, taxes, and any recurring charges."),
+        ],
+      },
+      { type: "h2", text: "How PropPact can help" },
+      {
+        type: "p",
+        runs: [
+          r("PropPact can take your enquiry, discuss the 2 BHK and 3 BHK options you want to compare, and ask the project side for the current price and availability. The project page remains the place to send that enquiry with Madhav Kunj already selected."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("View Madhav Kunj on PropPact: ", undefined, true),
+          r("https://www.proppact.co.in/projects/madhav-kunj", "/projects/madhav-kunj"),
+        ],
+      },
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "h3", text: "Where is Madhav Kunj?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied price list places Madhav Kunj at Techzone 7, Noida Extension, Greater Noida West. A verified building pin is not published here."),
+        ],
+      },
+      { type: "h3", text: "What configurations are listed?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied material lists a 2 BHK + 2T of 1,150 sq ft and a 3 BHK + 2T of 1,650 sq ft. Confirm the plan and the area basis for the unit on offer."),
+        ],
+      },
+      { type: "h3", text: "What is the Madhav Kunj price?" },
+      {
+        type: "p",
+        runs: [
+          r("The current price is on enquiry. A price list effective 10 May 2025 showed ₹58,00,000 and ₹68,00,000 before the additional charges named in that document. Those amounts are historical. Contact PropPact for the latest price, charges, and availability."),
+        ],
+      },
+      { type: "h3", text: "How do I enquire or ask for a site visit?" },
+      {
+        type: "p",
+        runs: [
+          r("Use the "),
+          r("Madhav Kunj project page", "/projects/madhav-kunj#enquire"),
+          r(", call or WhatsApp "),
+          r("+91 95609 59762", SITE.phoneHref),
+          r(", or email "),
+          r(SITE.email, SITE.emailHref),
+          r(". A site-visit request is an enquiry. The team confirms the arrangements separately."),
+        ],
+      },
+      { type: "h2", text: "Enquire about Madhav Kunj" },
+      {
+        type: "p",
+        runs: [
+          r("Contact PropPact to enquire about Madhav Kunj.", "/projects/madhav-kunj#enquire", true),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Call / WhatsApp: ", undefined, true),
+          r(SITE.phone, SITE.phoneHref),
+          r(" · "),
+          r("WhatsApp", "https://wa.me/919560959762"),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Email: ", undefined, true), r(SITE.email, SITE.emailHref)],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Project details: ", undefined, true),
+          r("https://www.proppact.co.in/projects/madhav-kunj", "/projects/madhav-kunj"),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: Prices, availability, specifications, and charges can change. The May 2025 amounts are historical. This article is general guidance. It is not a guarantee of appreciation, rental income, or a current offer. Confirm the price, documents, and terms independently before you pay."),
+        ],
+      },
+    ],
+  },
   {
     slug: "vista-homez-greater-noida-west",
     title: "Vista Homez Greater Noida West: A Buyer's Guide to 2 BHK Flats in Techzone 7",

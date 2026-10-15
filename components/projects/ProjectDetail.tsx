@@ -125,6 +125,16 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
                 </Link>
               </p>
             ) : null}
+            {project.slug === "madhav-kunj" ? (
+              <p className="mt-3 text-sm">
+                <Link
+                  href="/blog/madhav-kunj-greater-noida-west"
+                  className="font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:text-accent"
+                >
+                  Read our Madhav Kunj buyer&apos;s guide
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-3">
               <ContactCTA
                 action="whatsapp"
