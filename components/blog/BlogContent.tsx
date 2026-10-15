@@ -14,8 +14,10 @@ function RichText({ runs }: { runs: BlogRun[] }) {
         if (!run.href) {
           return <span key={index}>{text}</span>;
         }
+        const external = run.href.startsWith("http");
         const className =
-          "font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:text-accent";
+          "font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:text-accent" +
+          (external ? " inline-flex min-h-11 items-center" : "");
         if (run.href.startsWith("/")) {
           return (
             <Link key={index} href={run.href} className={className}>
@@ -24,7 +26,12 @@ function RichText({ runs }: { runs: BlogRun[] }) {
           );
         }
         return (
-          <a key={index} href={run.href} className={className}>
+          <a
+            key={index}
+            href={run.href}
+            className={className}
+            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
             {text}
           </a>
         );

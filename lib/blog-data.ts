@@ -1,3 +1,4 @@
+import { getProjectBySlug, getPropertyMapLinks } from "@/lib/projects-data";
 import { SITE } from "@/lib/site";
 
 export type BlogCategory =
@@ -52,7 +53,263 @@ const r = (text: string, href?: string, strong?: boolean): BlogRun => ({
   strong,
 });
 
+const yuvrajMaps = getPropertyMapLinks(getProjectBySlug("yuvraj-villa")!);
+const vistaMaps = getPropertyMapLinks(getProjectBySlug("vista-homez")!);
+
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "vista-homez-greater-noida-west",
+    title: "Vista Homez Greater Noida West: A Buyer's Guide to 2 BHK Flats in Techzone 7",
+    excerpt:
+      "Explore Vista Homez in Milak Lacchi, Techzone 7. Compare the listed 2 BHK sizes, see what to verify, and ask PropPact for the current price.",
+    category: "Buying Guides",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
+    image: "/images/projects/vista-homez/cover.jpg",
+    imageAlt: "Vista Homez 2 BHK flats in Techzone 7, Greater Noida West",
+    seoTitle: "Vista Homez Greater Noida West | 2 BHK Flats",
+    seoDescription:
+      "Explore Vista Homez in Techzone 7, Greater Noida West. Compare 2 BHK flat configurations, understand buying costs and contact PropPact for current prices and availability.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("If you are comparing "),
+          r("2 BHK flats in Greater Noida West", "/residential-properties"),
+          r(", "),
+          r("Vista Homez", "/projects/vista-homez", true),
+          r(" is one project to review. The supplied material places it at Milak Lacchi, Techzone 7, Noida Extension, Greater Noida West, and describes it as a low-rise 2 BHK apartment project."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A floor plan and an advertised area are only the starting point. Before you enquire or visit, confirm the layout that applies to the unit, the basis of the area figure, the total amount payable, and whether that unit is currently available."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("At "),
+          r("PropPact", undefined, true),
+          r(", the team can take an enquiry for Vista Homez and confirm the current price and availability. This guide sets out what the supplied material says, and what you should check yourself."),
+        ],
+      },
+      { type: "h2", text: "Where is Vista Homez?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied project material gives the location as "),
+          r("Milak Lacchi, Techzone 7, Noida Extension, Greater Noida West", undefined, true),
+          r(". Techzone 7 is also written Techzone-7 in that material. Visit the site and judge the approach roads, daily services, and your own commute at the times you would travel."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("On a visit, check:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("The route from your workplace or the places you travel to regularly.")],
+          [r("Schools, healthcare, and shops you would actually use.")],
+          [r("Road condition and access to public transport.")],
+          [r("Water, electricity, drainage, and the immediate surroundings.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(vistaMaps.note ?? "", undefined, false),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(vistaMaps.viewLabel, vistaMaps.viewHref),
+          r(" · "),
+          r(vistaMaps.directionsLabel, vistaMaps.directionsHref),
+        ],
+      },
+      { type: "h2", text: "Which 2 BHK sizes are listed?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied floor-plan material lists two areas: "),
+          r("980 sq ft and 1,050 sq ft", undefined, true),
+          r(". It does not state whether those figures are carpet area, built-up area, or super built-up area. Ask for the measurement basis before you compare Vista Homez with another flat."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The same material describes two rooms, two toilets, a kitchen, a drawing area, and a balcony. Confirm that this description matches the plan for the unit you are shown, and ask whether any photograph is a sample rather than that unit."),
+        ],
+      },
+      { type: "h2", text: "What should you check on the floor plan?" },
+      {
+        type: "ul",
+        items: [
+          [r("Room sizes and how the two bedrooms, drawing area, kitchen, toilets, and balcony are arranged.")],
+          [r("Whether the stated area includes areas you cannot use as living space.")],
+          [r("Light, ventilation, and the staircase or access in a low-rise building.")],
+          [r("What is included in writing, and what is only described in marketing material.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Do not treat advertised finishes, parking, or fittings as included until they appear on a written specification for the unit you are considering."),
+        ],
+      },
+      { type: "h2", text: "Who might consider a 2 BHK here?" },
+      {
+        type: "p",
+        runs: [
+          r("A 2 BHK can suit a small household, a first home, or a buyer who wants a lower entry size than a 3 BHK. It is a poor fit if you need more bedrooms, step-free access, or a location that has not been checked against your daily travel."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Decide from the actual plan, the total cost, and a visit. The number of bedrooms alone does not make the flat suitable."),
+        ],
+      },
+      { type: "h2", text: "What does Vista Homez cost?" },
+      {
+        type: "p",
+        runs: [
+          r("Vista Homez is shown as "),
+          r("Price on enquiry", "/projects/vista-homez#enquire", true),
+          r(". Contact PropPact for the current price, applicable charges, and availability. Older marketing figures are not the price payable today, and this article does not repeat them as a current quotation."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Ask for a written breakdown that covers:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("The price of the selected unit.")],
+          [r("Any electricity, meter, or other charges named in the current sheet.")],
+          [r("Stamp duty, registration, and taxes where they apply.")],
+          [r("Maintenance or other recurring charges.")],
+        ],
+      },
+      { type: "h2", text: "What should you inspect before you commit?" },
+      {
+        type: "p",
+        runs: [
+          r("Walk through the unit or the relevant sample, compare it with the floor plan, and check access, utilities, and the surrounding roads. Ask for the latest written price and specification, and keep a note of anything that must be confirmed in the agreement."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Before paying a booking amount, ask for the documents that apply to this property. They may include:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("Title and ownership records.")],
+          [r("Land-use permissions and building approvals that apply.")],
+          [r("Approved plans and any completion or occupancy papers, where they exist.")],
+          [r("Outstanding dues, charges, encumbrances, or disputes.")],
+          [r("The agreement, payment schedule, and possession terms.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("An independent property lawyer can review the title and the proposed papers before you pay a substantial amount. This page does not confirm approvals, a possession date, or current availability."),
+        ],
+      },
+      { type: "h2", text: "How PropPact can help" },
+      {
+        type: "p",
+        runs: [
+          r("PropPact can take your enquiry, discuss the 2 BHK options you want to compare, and ask the project side for the current price and availability. The project page remains the place to send that enquiry with Vista Homez already selected."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("View Vista Homez on PropPact: ", undefined, true),
+          r("https://www.proppact.co.in/projects/vista-homez", "/projects/vista-homez"),
+        ],
+      },
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "h3", text: "Where is Vista Homez?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied material places Vista Homez at Milak Lacchi, Techzone 7, Noida Extension, Greater Noida West."),
+        ],
+      },
+      { type: "h3", text: "What configurations are listed?" },
+      {
+        type: "p",
+        runs: [
+          r("The supplied floor-plan material lists 2 BHK apartments of 980 sq ft and 1,050 sq ft, with two rooms, two toilets, a kitchen, a drawing area, and a balcony. Confirm the plan and the area basis for the unit on offer."),
+        ],
+      },
+      { type: "h3", text: "What is the Vista Homez price?" },
+      {
+        type: "p",
+        runs: [
+          r("The current price is on enquiry. Contact PropPact for the latest price, charges, and availability. Do not rely on an older price sheet as today's price."),
+        ],
+      },
+      { type: "h3", text: "How do I enquire or ask for a site visit?" },
+      {
+        type: "p",
+        runs: [
+          r("Use the "),
+          r("Vista Homez project page", "/projects/vista-homez#enquire"),
+          r(", call or WhatsApp "),
+          r("+91 95609 59762", SITE.phoneHref),
+          r(", or email "),
+          r(SITE.email, SITE.emailHref),
+          r(". A site-visit request is an enquiry. The team confirms the arrangements separately."),
+        ],
+      },
+      { type: "h2", text: "Enquire about Vista Homez" },
+      {
+        type: "p",
+        runs: [
+          r("Contact PropPact to enquire about Vista Homez.", "/projects/vista-homez#enquire", true),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Call / WhatsApp: ", undefined, true),
+          r(SITE.phone, SITE.phoneHref),
+          r(" · "),
+          r("WhatsApp", "https://wa.me/919560959762"),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Email: ", undefined, true), r(SITE.email, SITE.emailHref)],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Project details: ", undefined, true),
+          r("https://www.proppact.co.in/projects/vista-homez", "/projects/vista-homez"),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: Prices, availability, specifications, and charges can change. This article is general guidance. It is not a guarantee of appreciation, rental income, or a current offer. Confirm the price, documents, and terms independently before you pay."),
+        ],
+      },
+    ],
+  },
   {
     slug: "yuvraj-villa-greater-noida-west-guide",
     title:
@@ -124,6 +381,14 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r("Travel times can vary according to your route and traffic conditions. Check the journey at the times you would normally travel instead of relying only on advertised distance claims."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(yuvrajMaps.viewLabel, yuvrajMaps.viewHref),
+          r(" · "),
+          r(yuvrajMaps.directionsLabel, yuvrajMaps.directionsHref),
         ],
       },
       { type: "h2", text: "2. Why Consider a 3 BHK Duplex Villa?" },

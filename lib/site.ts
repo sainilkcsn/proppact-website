@@ -413,6 +413,13 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "vista-homez-greater-noida-west",
+    title: "Vista Homez Greater Noida West: A Buyer's Guide to 2 BHK Flats in Techzone 7",
+    excerpt:
+      "Explore Vista Homez in Milak Lacchi, Techzone 7. Compare the listed 2 BHK sizes, see what to verify, and ask PropPact for the current price.",
+    image: "/images/projects/vista-homez/cover.jpg",
+  },
+  {
     slug: "yuvraj-villa-greater-noida-west-guide",
     title:
       "Yuvraj Villa Greater Noida West: A Buyer's Guide to 3 BHK Duplex Villas in Vaidpura",

@@ -5,6 +5,7 @@ import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { OfficeMap } from "@/components/maps/OfficeMap";
+import { PropertyMapLinks } from "@/components/maps/PropertyMapLinks";
 import { ContactCTA } from "@/components/ui/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import type { Project } from "@/lib/projects-data";
@@ -114,6 +115,16 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
                 </Link>
               </p>
             ) : null}
+            {project.slug === "vista-homez" ? (
+              <p className="mt-3 text-sm">
+                <Link
+                  href="/blog/vista-homez-greater-noida-west"
+                  className="font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:text-accent"
+                >
+                  Read our Vista Homez buyer&apos;s guide
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-3">
               <ContactCTA
                 action="whatsapp"
@@ -219,16 +230,7 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
                   The address above is the location stated in the supplied material.
                 </p>
               )}
-              <p className="mt-3">
-                <Link
-                  href={project.mapUrl}
-                  className="font-medium text-primary underline-offset-2 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open this location in Google Maps
-                </Link>
-              </p>
+              <PropertyMapLinks project={project} />
             </div>
           </div>
           <LeadCaptureForm

@@ -41,6 +41,8 @@ export type Project = {
   mapUrl: string;
   /** True only when this project's pin is the verified PropPact office location. */
   verifiedOfficePin?: boolean;
+  /** Set only when this project's own coordinates have been verified. */
+  verifiedCoordinates?: { latitude: number; longitude: number };
   availabilityLabel: string;
   featured: boolean;
   enquiryEnabled: boolean;
@@ -212,6 +214,10 @@ export const PROJECTS: Project[] = [
     marketer: null,
     mapUrl: SITE.mapsUrl,
     verifiedOfficePin: true,
+    verifiedCoordinates: {
+      latitude: SITE.latitude,
+      longitude: SITE.longitude,
+    },
     availabilityLabel: "Availability must be confirmed with PropPact",
     featured: true,
     enquiryEnabled: true,
@@ -299,6 +305,29 @@ export const PROJECTS: Project[] = [
     enquiryEnabled: true,
   },
 ];
+
+export function getPropertyMapLinks(project: Project) {
+  if (project.verifiedCoordinates) {
+    const query = `${project.verifiedCoordinates.latitude},${project.verifiedCoordinates.longitude}`;
+    return {
+      verifiedPin: true,
+      note: null,
+      viewLabel: "View on Google Maps",
+      directionsLabel: "Get Directions",
+      viewHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`,
+      directionsHref: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`,
+    };
+  }
+
+  return {
+    verifiedPin: false,
+    note: "A verified map pin is not available for this project. These links search the locality stated in the supplied material.",
+    viewLabel: "Search the stated locality on Google Maps",
+    directionsLabel: "Get directions to the stated locality",
+    viewHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.address)}`,
+    directionsHref: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(project.address)}`,
+  };
+}
 
 export function getProjectBySlug(slug: string) {
   return PROJECTS.find((project) => project.slug === slug);
