@@ -413,6 +413,14 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "yuvraj-villa-greater-noida-west-guide",
+    title:
+      "Yuvraj Villa Greater Noida West: A Buyer's Guide to 3 BHK Duplex Villas in Vaidpura",
+    excerpt:
+      "Looking for a 3 BHK duplex villa in Greater Noida West? Explore Yuvraj Villa in Vaidpura, understand the features and costs to evaluate, and learn what to check before booking a site visit.",
+    image: "/images/projects/yuvraj-villa/cover.jpg",
+  },
+  {
     slug: "how-to-choose-right-property-to-buy",
     title:
       "How to Choose the Right Property to Buy: Flat, Villa, Plot or Commercial in Greater Noida West",

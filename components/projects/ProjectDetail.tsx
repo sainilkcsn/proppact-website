@@ -104,6 +104,16 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
             <p className="mt-3 text-sm text-muted-foreground">
               A site-visit request is an enquiry. The team will confirm the arrangements separately.
             </p>
+            {project.slug === "yuvraj-villa" ? (
+              <p className="mt-3 text-sm">
+                <Link
+                  href="/blog/yuvraj-villa-greater-noida-west-guide"
+                  className="font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:text-accent"
+                >
+                  Read our Yuvraj Villa buyer&apos;s guide
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-3">
               <ContactCTA
                 action="whatsapp"

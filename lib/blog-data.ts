@@ -17,6 +17,8 @@ export type BlogBlock =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "ul"; items: BlogRun[][] }
+  | { type: "ol"; items: BlogRun[][] }
+  | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "image"; src: string; alt: string };
 
 export type BlogPost = {
@@ -51,6 +53,453 @@ const r = (text: string, href?: string, strong?: boolean): BlogRun => ({
 });
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "yuvraj-villa-greater-noida-west-guide",
+    title:
+      "Yuvraj Villa Greater Noida West: A Buyer's Guide to 3 BHK Duplex Villas in Vaidpura",
+    excerpt:
+      "Looking for a 3 BHK duplex villa in Greater Noida West? Explore Yuvraj Villa in Vaidpura, understand the features and costs to evaluate, and learn what to check before booking a site visit.",
+    category: "Buying Guides",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
+    image: "/images/projects/yuvraj-villa/cover.jpg",
+    imageAlt: "Yuvraj Villa 3 BHK duplex villas in Vaidpura Greater Noida West",
+    seoTitle: "Yuvraj Villa Greater Noida West | 3 BHK Duplex Villas",
+    seoDescription:
+      "Explore Yuvraj Villa in Vaidpura, Greater Noida West. Discover 3 BHK duplex villa features, pricing considerations, location and how to arrange a site visit with PropPact.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("Are you looking for a spacious home in Greater Noida West? If you are comparing independent-style homes, duplex layouts and residential properties in Noida Extension, "),
+          r("Yuvraj Villa in Vaidpura, Sector 10, Greater Noida West", "/projects/yuvraj-villa", true),
+          r(" is one option worth exploring."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("For families looking for more privacy and space than a conventional apartment may offer, a 3 BHK duplex villa can be an attractive choice. However, choosing the right property involves more than looking at photographs or comparing advertised prices. You should also understand the layout, total purchase cost, location, documentation and suitability for your family's needs."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("At "),
+          r("PropPact", undefined, true),
+          r(", we help property buyers explore available options and arrange enquiries for properties that match their requirements. This guide explains what to consider when evaluating Yuvraj Villa and how to take the next step."),
+        ],
+      },
+      { type: "h2", text: "1. Where Is Yuvraj Villa Located?" },
+      {
+        type: "p",
+        runs: [
+          r("Yuvraj Villa is located in "),
+          r("Vaidpura, Sector 10, Greater Noida West, Uttar Pradesh", undefined, true),
+          r(", in the broader Noida Extension property market."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("When evaluating a villa in this area, consider your daily commute, access to essential services, road connectivity and the facilities you and your family use regularly."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Before making a decision, visit the actual location and check:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("The route from your workplace or regular commuting destination.")],
+          [r("Nearby schools, healthcare facilities and daily shopping options.")],
+          [r("Road conditions and access to public transport.")],
+          [r("Water supply, electricity, drainage and other essential services.")],
+          [r("The surrounding neighbourhood and the property's immediate access roads.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Travel times can vary according to your route and traffic conditions. Check the journey at the times you would normally travel instead of relying only on advertised distance claims."),
+        ],
+      },
+      { type: "h2", text: "2. Why Consider a 3 BHK Duplex Villa?" },
+      {
+        type: "p",
+        runs: [
+          r("A duplex villa generally distributes its living space across two levels. Depending on the particular floor plan, this arrangement can provide separation between shared family areas and private bedrooms."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Yuvraj Villa is marketed as a 3 BHK duplex-villa project. Buyers should review the applicable floor plan and specifications for the specific unit they are considering."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("A duplex home may suit you if you are looking for:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("More defined living areas: ", undefined, true), r("Separate levels may help organise family activities and private spaces.")],
+          [r("Additional privacy: ", undefined, true), r("Bedrooms and shared living areas can be arranged on different floors, depending on the plan.")],
+          [r("An independent-home style: ", undefined, true), r("A villa may offer a different living experience from an apartment in a multi-storey building.")],
+          [r("Space for a growing family: ", undefined, true), r("Three bedrooms may be useful for family members, guests or a home office, depending on the layout.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("However, a duplex may not suit everyone. Staircases, maintenance responsibilities, accessibility requirements and the actual usable area should all be considered before booking."),
+        ],
+      },
+      { type: "h2", text: "3. Features to Evaluate at Yuvraj Villa" },
+      {
+        type: "p",
+        runs: [
+          r("When exploring Yuvraj Villa, review the supplied project brochure, specifications and the actual unit being offered."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The project marketing highlights a modern residential layout and features such as a modular kitchen, premium flooring and dedicated car parking. Confirm the exact specifications, inclusions and availability for the particular villa before relying on any feature in your purchase decision."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("During your visit, pay attention to the following:")],
+      },
+      { type: "h3", text: "Floor plan and room sizes" },
+      {
+        type: "p",
+        runs: [
+          r("Check the dimensions and arrangement of all three bedrooms, bathrooms, living spaces, kitchen, staircase and balconies or terraces, where applicable."),
+        ],
+      },
+      { type: "h3", text: "Kitchen and interiors" },
+      {
+        type: "p",
+        runs: [
+          r("Confirm what is included in the kitchen, cabinets, fittings, flooring and other interior specifications. Ask whether any photographs show a furnished sample unit or the actual property being offered."),
+        ],
+      },
+      { type: "h3", text: "Parking and access" },
+      {
+        type: "p",
+        runs: [
+          r("Verify the parking arrangement, access to the property and any applicable restrictions or charges."),
+        ],
+      },
+      { type: "h3", text: "Utilities and construction" },
+      {
+        type: "p",
+        runs: [
+          r("Inspect water supply, electrical fittings, drainage, ventilation, natural light and visible construction quality. Ask for relevant technical documentation and approvals."),
+        ],
+      },
+      { type: "h3", text: "Maintenance responsibilities" },
+      {
+        type: "p",
+        runs: [
+          r("Understand which areas and facilities are maintained individually and which, if any, are managed collectively. Obtain details of recurring charges before making a financial commitment."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A written specification sheet is more useful than relying on verbal assurances or promotional photographs alone."),
+        ],
+      },
+      { type: "h2", text: "4. Yuvraj Villa Price: What Should Buyers Budget For?" },
+      {
+        type: "p",
+        runs: [
+          r("The price of a property is an important part of any purchase decision, but the advertised base price is not necessarily the final amount payable."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("PropPact's supplied Yuvraj Villa price list, effective "),
+          r("21 September 2026", undefined, true),
+          r(", recorded the following indicative base prices:"),
+        ],
+      },
+      {
+        type: "table",
+        headers: ["Villa type", "Listed base price"],
+        rows: [
+          ["Type A", "₹86 lakh"],
+          ["Type B", "₹85 lakh"],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("The supplied list also identifies ₹1 lakh for electrification and water, along with additional fees. These amounts should not be treated as a confirmed all-inclusive purchase price."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Important: ", undefined, true),
+          r("These are figures from the dated price list, not a guarantee of the current selling price or availability. Ask PropPact to confirm the latest price list, applicable charges, available unit types and payment terms before proceeding."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("When comparing the total cost of a villa, ask for a written breakdown covering:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("Base price of the selected unit.")],
+          [r("Electrification, water and other applicable charges.")],
+          [r("Stamp duty and registration costs, where applicable.")],
+          [r("Maintenance or other recurring charges.")],
+          [r("Any other charges specified in the sale documentation.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Compare the final cost against your budget and financing arrangements rather than comparing base prices alone."),
+        ],
+      },
+      { type: "h2", text: "5. Is Yuvraj Villa Suitable for Your Family?" },
+      {
+        type: "p",
+        runs: [
+          r("The right home depends on how you plan to use it, not just the number of bedrooms."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Yuvraj Villa may be worth considering if you want to explore a duplex layout in Vaidpura and prefer a home with more separation between living areas than a typical single-level apartment provides."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Before deciding, consider these questions:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("Will the bedroom arrangement suit your family now and in the future?")],
+          [r("Are the stairs comfortable and practical for everyone who will live there?")],
+          [r("Is the location convenient for your daily routine?")],
+          [r("Does the property fit your complete budget, including applicable charges?")],
+          [r("Are the title, approvals, specifications and sale documents satisfactory?")],
+          [r("Have you inspected the actual unit and its surroundings?")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("If you are buying for investment rather than personal use, separately assess realistic rental demand, maintenance expenses, resale liquidity and the time you may need to hold the property. Neither price appreciation nor rental income is guaranteed."),
+        ],
+      },
+      { type: "h2", text: "6. Legal and Documentation Checks Before Booking" },
+      {
+        type: "p",
+        runs: [
+          r("Before paying a booking amount or signing an agreement, conduct appropriate due diligence."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Ask for the documents relevant to the property, which may include:")],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("Title and ownership records.")],
+          [r("Applicable land-use permissions and building approvals.")],
+          [r("Approved plans and relevant completion or occupancy documents, where applicable.")],
+          [r("Details of outstanding dues, charges, encumbrances or disputes.")],
+          [r("A written specification sheet and complete cost breakdown.")],
+          [r("The proposed agreement, payment schedule and possession terms.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Confirm the applicable legal and regulatory requirements for the specific property. Do not assume that documentation requirements are identical for every type of villa or residential project."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("An independent property lawyer can help review the title, approvals and proposed transaction before you make a substantial payment."),
+        ],
+      },
+      { type: "h2", text: "7. How to Arrange a Site Visit for Yuvraj Villa" },
+      {
+        type: "p",
+        runs: [
+          r("A site visit is an important step in evaluating any property. It lets you compare the actual layout and surroundings with the information provided in the brochure or online."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Before your visit, prepare a list of questions about the available villa types, current pricing, specifications, applicable charges and documentation."),
+        ],
+      },
+      { type: "p", runs: [r("During the visit:")] },
+      {
+        type: "ol",
+        items: [
+          [r("Inspect the actual property or the relevant sample unit.")],
+          [r("Review the floor plan and room dimensions.")],
+          [r("Check access roads, parking and essential utilities.")],
+          [r("Ask for the latest written price and specification details.")],
+          [r("Record any commitments that need to be confirmed in writing.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("You can contact "),
+          r("PropPact", undefined, true),
+          r(" to enquire about Yuvraj Villa, confirm current availability and discuss arranging a site visit."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("View Yuvraj Villa on PropPact: ", undefined, true),
+          r("https://www.proppact.co.in/projects/yuvraj-villa", "/projects/yuvraj-villa"),
+        ],
+      },
+      { type: "h2", text: "8. Why Explore Yuvraj Villa Through PropPact?" },
+      {
+        type: "p",
+        runs: [
+          r("Choosing a property requires more than finding an attractive home. Buyers need clear information about the unit, pricing, documentation and the next steps in the purchase process."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("PropPact helps buyers explore residential property options in Greater Noida West and the surrounding Noida Extension market."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("If you are considering Yuvraj Villa, our team can help you make an enquiry, discuss your requirements and seek confirmation of current pricing and availability."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("We encourage buyers to inspect the property, verify relevant documents and understand the complete purchase cost before making a commitment."),
+        ],
+      },
+      { type: "h2", text: "Frequently Asked Questions About Yuvraj Villa" },
+      { type: "h3", text: "Where is Yuvraj Villa located?" },
+      {
+        type: "p",
+        runs: [
+          r("Yuvraj Villa is located in Vaidpura, Sector 10, Greater Noida West, Uttar Pradesh, within the Noida Extension market."),
+        ],
+      },
+      { type: "h3", text: "What type of property is Yuvraj Villa?" },
+      {
+        type: "p",
+        runs: [
+          r("Yuvraj Villa is marketed as a 3 BHK duplex-villa project. Check the applicable floor plan and specifications for the particular unit being offered."),
+        ],
+      },
+      { type: "h3", text: "What is the price of Yuvraj Villa?" },
+      {
+        type: "p",
+        runs: [
+          r("A supplied price list effective 21 September 2026 recorded Type A at ₹86 lakh and Type B at ₹85 lakh, with ₹1 lakh identified for electrification and water plus additional fees. These figures are not a confirmed all-inclusive price. Contact PropPact to verify current pricing and availability."),
+        ],
+      },
+      { type: "h3", text: "What should I check before buying a villa in Greater Noida West?" },
+      {
+        type: "p",
+        runs: [
+          r("Review the floor plan, total cost, title and ownership documents, applicable approvals, construction quality, utilities, access, recurring charges and sale agreement. Consider an independent legal review before committing."),
+        ],
+      },
+      { type: "h3", text: "How can I enquire about Yuvraj Villa?" },
+      {
+        type: "p",
+        runs: [
+          r("Visit the "),
+          r("Yuvraj Villa project page", "/projects/yuvraj-villa"),
+          r(" on PropPact, call or WhatsApp the team on "),
+          r("+91 95609 59762", SITE.phoneHref),
+          r(", or email "),
+          r(SITE.email, SITE.emailHref),
+          r("."),
+        ],
+      },
+      { type: "h2", text: "Explore Yuvraj Villa with PropPact" },
+      {
+        type: "p",
+        runs: [
+          r("If you are searching for a "),
+          r("3 BHK duplex villa in Greater Noida West", "/villas-for-sale", true),
+          r(", Yuvraj Villa in Vaidpura is an option to investigate based on your family's needs, budget and preferred home layout."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Review the floor plans, inspect the property, request a current written price breakdown and verify the relevant documents before deciding."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Contact PropPact to enquire about Yuvraj Villa and arrange your next step.", "/projects/yuvraj-villa#enquire", true),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Call / WhatsApp: ", undefined, true),
+          r(SITE.phone, SITE.phoneHref),
+          r(" · "),
+          r("WhatsApp", "https://wa.me/919560959762"),
+        ],
+      },
+      {
+        type: "p",
+        runs: [r("Email: ", undefined, true), r(SITE.email, SITE.emailHref)],
+      },
+      {
+        type: "p",
+        runs: [r("Location: ", undefined, true), r(SITE.address, SITE.mapsUrl)],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Project details: ", undefined, true),
+          r("https://www.proppact.co.in/projects/yuvraj-villa", "/projects/yuvraj-villa"),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: Property prices, availability, specifications and applicable charges may change. Information in this article is for general guidance and does not constitute a guarantee of appreciation, rental income or investment returns. Verify the current price, property documents, approvals and all applicable terms independently before purchasing."),
+        ],
+      },
+    ],
+  },
   {
     slug: "how-to-choose-right-property-to-buy",
     title:

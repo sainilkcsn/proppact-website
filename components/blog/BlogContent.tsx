@@ -57,15 +57,58 @@ export function BlogContent({ blocks }: { blocks: BlogBlock[] }) {
             </h3>
           );
         }
-        if (block.type === "ul") {
+        if (block.type === "ul" || block.type === "ol") {
+          const List = block.type === "ol" ? "ol" : "ul";
           return (
-            <ul key={index} className="list-disc space-y-2 pl-5">
+            <List
+              key={index}
+              className={
+                block.type === "ol"
+                  ? "list-decimal space-y-2 pl-5"
+                  : "list-disc space-y-2 pl-5"
+              }
+            >
               {block.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <RichText runs={item} />
                 </li>
               ))}
-            </ul>
+            </List>
+          );
+        }
+        if (block.type === "table") {
+          return (
+            <div key={index} className="overflow-x-auto">
+              <table className="w-full min-w-[20rem] border-collapse text-left text-sm sm:text-base">
+                <thead>
+                  <tr className="border-b border-border text-foreground">
+                    {block.headers.map((header) => (
+                      <th key={header} className="px-3 py-2 font-semibold">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr key={row.join("|")} className="border-b border-border">
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={cellIndex}
+                          className={
+                            cellIndex === row.length - 1
+                              ? "px-3 py-2 text-right"
+                              : "px-3 py-2"
+                          }
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           );
         }
         if (block.type === "image") {
