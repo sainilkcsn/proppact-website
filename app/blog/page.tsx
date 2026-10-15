@@ -10,12 +10,12 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `Real Estate Guides & Market Updates in ${SITE.city}`,
-  description: `Property buying guides, ${SITE.city} real estate market trends, legal checklists and investment tips from the PropPact team.`,
+  description: `Buying guides for published residential projects in ${SITE.city}, plus checklists for documents, visits, and price lists. Current prices are confirmed with PropPact.`,
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: {
     url: `${SITE.url}/blog`,
     title: `PropPact Blog | ${SITE.city} Real Estate Resources`,
-    description: `Guides, market updates and investment tips for ${SITE.city}.`,
+    description: `Buying guides and checklists for ${SITE.city}. Current prices are confirmed with PropPact.`,
     images: [{ url: "/images/blog-property.jpg" }],
   },
   twitter: {
@@ -33,14 +33,19 @@ export default function BlogPage() {
     <>
       <PageHero
         title="PropPact Real Estate Resources"
-        description={`Stay informed before you buy, sell, or invest. The PropPact blog covers ${SITE.city} real estate market trends, legal and documentation checklists, home loan guidance, and area-wise investment insights — written by our own team of property experts.`}
+        description={`Guides for buyers comparing published residential projects in ${SITE.city}, with checklists for documents, site visits, and how to read a price list. Current prices and availability are confirmed with the PropPact team.`}
         imageSrc="/images/blog-property.jpg"
         imageAlt={`Real estate guides and market updates for ${SITE.city}`}
       />
 
       <section className="py-10">
         <Container>
-          <nav aria-label="Blog categories" className="flex flex-wrap gap-2">
+          <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">
+            These articles describe supplied project material and the checks a buyer can make.
+            They do not publish a city-wide price index, predicted returns, or unpublished inventory.
+            Open any article below. Each card links to a published guide.
+          </p>
+          <nav aria-label="Topics covered" className="mt-6 flex flex-wrap gap-2">
             {BLOG_CATEGORIES.map((category) => (
               <span
                 key={category}

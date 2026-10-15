@@ -21,6 +21,18 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
   const similar = getSimilarProjects(project.slug);
   const initialEnquiryType = intent === "site-visit" ? "site_visit" : "project";
 
+  const faqSchema = project.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: project.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -47,6 +59,12 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
       <section className="border-b border-border bg-background py-6">
         <Container>
           <Breadcrumbs
@@ -264,6 +282,28 @@ export function ProjectDetail({ project, intent }: ProjectDetailProps) {
           />
         </Container>
       </section>
+
+      {project.faqs?.length ? (
+        <section className="border-t border-border py-12 sm:py-16">
+          <Container className="max-w-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-primary">
+              Questions about {project.name}
+            </h2>
+            <div className="mt-6 space-y-6">
+              {project.faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-heading text-lg font-semibold text-primary">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       <section className="border-t border-border bg-[#F1EFE9] py-12 sm:py-16">
         <Container>

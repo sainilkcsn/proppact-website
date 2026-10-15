@@ -15,6 +15,11 @@ export type HistoricalPriceGuide = {
   disclaimer: string;
 };
 
+export type ProjectFaq = {
+  question: string;
+  answer: string;
+};
+
 export type Project = {
   id: string;
   slug: string;
@@ -50,6 +55,7 @@ export type Project = {
   availabilityLabel: string;
   featured: boolean;
   enquiryEnabled: boolean;
+  faqs?: ProjectFaq[];
 };
 
 const mapsSearch = (query: string) =>
@@ -166,6 +172,28 @@ export const PROJECTS: Project[] = [
     availabilityLabel: "Availability must be confirmed with PropPact",
     featured: true,
     enquiryEnabled: true,
+    faqs: [
+      {
+        question: "Where is Madhav Kunj?",
+        answer:
+          "The supplied price list places Madhav Kunj at Techzone-7, Noida Extension, Greater Noida West. A verified building pin is not published on this page. The map links search that stated locality.",
+      },
+      {
+        question: "Which configurations are listed?",
+        answer:
+          "The supplied material lists a 2 BHK + 2T of 1,150 sq ft and a 3 BHK + 2T of 1,650 sq ft. It does not say whether those figures are carpet, built-up, or super built-up area. Ask for the plan that applies to the unit you are shown.",
+      },
+      {
+        question: "What is the current price?",
+        answer:
+          "The current price is on enquiry. A price list effective 10 May 2025 showed ₹58,00,000 for the 2 BHK + 2T and ₹68,00,000 for the 3 BHK + 2T, before other charges named in that list. Those amounts are historical.",
+      },
+      {
+        question: "How do I enquire?",
+        answer:
+          "Use the enquiry form on this page, call, or WhatsApp PropPact. A site-visit request is an enquiry. The team confirms the arrangements separately.",
+      },
+    ],
   },
   {
     id: "yuvraj-villa",
@@ -225,6 +253,28 @@ export const PROJECTS: Project[] = [
     availabilityLabel: "Availability must be confirmed with PropPact",
     featured: true,
     enquiryEnabled: true,
+    faqs: [
+      {
+        question: "Where is Yuvraj Villa?",
+        answer:
+          "The supplied material places Yuvraj Villa at Vaidpura, Sector 10, Greater Noida West. The map on this page uses the verified coordinates for that location. The PropPact office is at Yuvraj Villa, so those coordinates are also the office pin.",
+      },
+      {
+        question: "What is listed for the villas?",
+        answer:
+          "The supplied price list describes 3 BHK duplex villas on 70 sq yd plots. Type A is unit numbers 1–11, with a plot dimension of 31.5 ft × 20 ft. Type B is unit numbers 12–27, with a plot dimension of 21 ft × 30 ft.",
+      },
+      {
+        question: "What price is shown?",
+        answer:
+          "The page shows an indicative price from ₹85 lakh plus applicable charges, from a list effective 21 September 2026. That list records a basic price of ₹86,00,000 for Type A and ₹85,00,000 for Type B, plus ₹1,00,000 for electrification and water. Registration, stamp duty, legal documentation, GST and other government charges are additional. This is not an all-inclusive price, and unit availability is not confirmed here.",
+      },
+      {
+        question: "How do I enquire?",
+        answer:
+          "Use the enquiry form on this page, call, or WhatsApp PropPact. A site-visit request is an enquiry. The team confirms the arrangements separately. The buyer's guide linked on this page explains what to check before you visit.",
+      },
+    ],
   },
   {
     id: "rudransh-urban-vista",

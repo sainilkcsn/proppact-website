@@ -1801,34 +1801,273 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "real-estate-price-trends",
-    title: `${SITE.city} Real Estate Price Trends [Year]`,
+    title: `How to Read a Property Price List in ${SITE.city}`,
     excerpt:
-      "Area-wise market movement and what it means for buyers and investors.",
+      "This page does not publish a price index. It explains how to read the dated project lists on PropPact and what still has to be confirmed.",
     category: "Market Updates",
-    date: "2025-12-05",
-    dateLabel: "5 Dec 2025",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
     image: "/images/hero-home.jpg",
-    featured: true,
-    content: [
-      `Local price trends in ${SITE.city} vary by corridor, inventory type, and infrastructure progress. Treat broad headlines as context — not a substitute for locality-level comparison.`,
-      "When evaluating a purchase, look at comparable transactions, possession timelines, and total cost including taxes and registration.",
-      "Ask PropPact for locality-specific guidance aligned to your budget and holding period.",
+    imageAlt: "Residential property in Greater Noida West",
+    seoTitle: `Greater Noida West Property Prices | How to Read a Price List`,
+    seoDescription:
+      "PropPact does not publish a Greater Noida West price index. Learn how to read a project price list, which figures are dated or undated, and what to confirm before you treat a number as current.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("PropPact does not publish a price index for "),
+          r("Greater Noida West", "/residential-properties"),
+          r(". A city-wide headline, a neighbour's quote, or an undated brochure is not a current offer. This note explains how to read the project lists that are actually on this website."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Each list below applies only to the project and the document it came from. None of them is a market average, and none of them is a promise that the same figure is payable today."),
+        ],
+      },
+      { type: "h2", text: "What a usable price list should show" },
+      {
+        type: "ul",
+        items: [
+          [r("The project and the unit or configuration the figure applies to.")],
+          [r("The date of the list, or a clear statement that no date is visible.")],
+          [r("Whether the amount is a basic price or an all-inclusive price.")],
+          [r("Charges named separately, such as metre, preferential location, taxes, or maintenance.")],
+          [r("What is still unknown: availability, the area measurement, and possession.")],
+        ],
+      },
+      { type: "h2", text: "Lists published on PropPact" },
+      {
+        type: "p",
+        runs: [
+          r("These are the residential projects with a supplied price document on this site. Open the project page before you rely on a number."),
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            r("Yuvraj Villa", "/projects/yuvraj-villa"),
+            r(" — Vaidpura, Sector 10. The supplied list is effective 21 September 2026 and shows indicative basic prices from ₹85 lakh, plus stated charges. It is not an all-inclusive price, and availability is not confirmed on the page."),
+          ],
+          [
+            r("Madhav Kunj", "/projects/madhav-kunj"),
+            r(" — Techzone 7. A list effective 10 May 2025 showed ₹58,00,000 and ₹68,00,000 for the two named plans. The current price is on enquiry. Those May 2025 figures are historical."),
+          ],
+          [
+            r("Vista Homez", "/projects/vista-homez"),
+            r(" — Milak Lacchi, Techzone 7. A list effective 8 October 2025 is kept on the project page as historical. The current price is on enquiry."),
+          ],
+          [
+            r("Rudransh Urban Vista", "/projects/rudransh-urban-vista"),
+            r(" — Sector 10. The supplied artwork has no visible effective date. Amounts on that artwork are not a current quotation. The current price is on enquiry."),
+          ],
+        ],
+      },
+      { type: "h2", text: "What this page will not do" },
+      {
+        type: "p",
+        runs: [
+          r("It does not estimate how much Greater Noida West prices rose or fell in a year. No verified city-wide series is cited here, so no percentage, average rate, or forecast is given. If you see a year or a statistic added to this headline without a source, treat it as unfinished."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Compare two projects only after you know the date of each list, what the area figure includes, and which charges sit outside the headline. Then ask PropPact for the current sheet for the unit you are considering."),
+        ],
+      },
+      { type: "h2", text: "What to ask before you treat a figure as current" },
+      {
+        type: "ul",
+        items: [
+          [r("Is this the price of the unit on offer, or a starting figure from an older sheet?")],
+          [r("Which charges are extra, and which of them still apply?")],
+          [r("Is the area carpet, built-up, or super built-up? The supplied sheets on this site do not always say.")],
+          [r("Is the unit available, and what does the agreement say about payment and possession?")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("For a wider buying checklist, see "),
+          r("how to choose a flat, villa, plot, or commercial space", "/blog/how-to-choose-right-property-to-buy"),
+          r(". For a document list before a flat purchase, see the "),
+          r("documents checklist", "/blog/documents-checklist-buying-flat"),
+          r("."),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: Project price lists change. A dated or undated figure on PropPact is not a current offer and not a prediction of future prices. Confirm the amount payable, the charges, and availability with PropPact and in the papers you sign."),
+        ],
+      },
     ],
   },
   {
     slug: "commercial-property-first-time-buyers",
-    title:
-      "Commercial Property Investment: What First-Time Buyers Should Know",
+    title: `Commercial Property for First-Time Buyers in ${SITE.city}`,
     excerpt:
-      "Yield, approvals, and location factors every first-time commercial buyer should evaluate.",
+      "What to check before a first commercial purchase: total cost, lease assumptions, occupancy, documents, and risks. No yield is promised.",
     category: "Investment",
-    date: "2025-11-18",
-    dateLabel: "18 Nov 2025",
+    date: "2026-10-15",
+    dateLabel: "15 Oct 2026",
     image: "/images/commercial-hero.jpg",
-    content: [
-      "Commercial property can support long-term portfolio goals, but first-time buyers should evaluate use permissions, tenantability, and operating costs carefully.",
-      `In ${SITE.city}, footfall, access, and commercial-use approvals matter as much as headline price.`,
-      "PropPact helps investors compare retail, office, and other commercial formats with practical due diligence.",
+    imageAlt: "Commercial property considerations in Greater Noida West",
+    seoTitle: "Commercial Property for First-Time Buyers | Greater Noida West",
+    seoDescription:
+      "A first-time buyer's checklist for commercial property in Greater Noida West. Review total cost, lease assumptions, occupancy, documents and risks before you enquire with PropPact.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r("A first commercial purchase in "),
+          r("Greater Noida West", "/commercial-properties"),
+          r(" is a different decision from buying a flat to live in. The useful question is not whether commercial property is a good investment in general. It is whether this unit, this use, and this set of papers fit what you can pay and operate."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("PropPact is not publishing a commercial project list on the "),
+          r("commercial properties page", "/commercial-properties"),
+          r(". This article is a checklist. It does not quote a yield, a rent, or a return."),
+        ],
+      },
+      { type: "h2", text: "Start with the permitted use" },
+      {
+        type: "p",
+        runs: [
+          r("Confirm what the unit is allowed to be used for, and whether that matches the shop, office, or other activity you have in mind. A residential permission, a different commercial category, or a restriction in the building can block the use even when the location looks suitable."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Also check access, parking that is actually allotted, signage rules, and the hours the building allows. Visit at the time of day your customers or staff would arrive."),
+        ],
+      },
+      { type: "h2", text: "Add up the cost, not just the headline price" },
+      {
+        type: "p",
+        runs: [
+          r("Ask for a written breakdown before you compare two options. Depending on the deal, the amount payable can include:"),
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [r("The price of the unit, and whether it is basic or inclusive.")],
+          [r("Stamp duty, registration, and taxes that apply to this purchase.")],
+          [r("GST, if it applies. Do not assume a rate from a residential example.")],
+          [r("Fit-out, meter, and other connection charges.")],
+          [r("Deposits, advance maintenance, and any preferential-location charge.")],
+          [r("Money you still need if the unit is handed over unfinished.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("A lower headline price is not the cheaper purchase until those lines are on the same sheet."),
+        ],
+      },
+      { type: "h2", text: "Do not treat a hoped-for rent as income" },
+      {
+        type: "p",
+        runs: [
+          r("A lease is a separate agreement. If someone quotes a rent, ask who the tenant is, how long the lease runs, what the rent covers, and what happens if the tenant leaves. A vacant unit has no rent until a tenant is signed. An occupied unit needs the lease, the deposit, and any arrears checked."),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("This page does not estimate rental yield. A yield calculated from an unverified rent and an incomplete purchase cost is not a basis for a decision."),
+        ],
+      },
+      { type: "h2", text: "Check who occupies the unit" },
+      {
+        type: "ul",
+        items: [
+          [r("Vacant: confirm you can take possession, and what work is required before use.")],
+          [r("Occupied: read the lease, the notice period, and whether you are buying subject to that tenant.")],
+          [r("Partly used: confirm which area is included in the sale and which is shared.")],
+        ],
+      },
+      { type: "h2", text: "Documents worth asking for" },
+      {
+        type: "ul",
+        items: [
+          [r("Title and ownership records.")],
+          [r("The permitted use and the building approvals that apply.")],
+          [r("Approved plans, and completion or occupancy papers where they exist.")],
+          [r("Dues, charges, encumbrances, or disputes.")],
+          [r("The sale agreement, payment schedule, and possession terms.")],
+          [r("Any lease you would inherit, including rent, deposit, and termination.")],
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("An independent property lawyer can review the title and the proposed papers before you pay a substantial amount. This article does not confirm that a particular unit is approved for a particular business."),
+        ],
+      },
+      { type: "h2", text: "Risks to name before you commit" },
+      {
+        type: "ul",
+        items: [
+          [r("The unit cannot be used for the business you planned.")],
+          [r("The total payable is higher than the figure you compared.")],
+          [r("There is no tenant, or the tenant can leave.")],
+          [r("Maintenance, repairs, or a fit-out continues after purchase.")],
+          [r("You need to sell later in a smaller set of buyers than a flat might have.")],
+        ],
+      },
+      { type: "h2", text: "How PropPact can help" },
+      {
+        type: "p",
+        runs: [
+          r("PropPact can take an enquiry and discuss what you want to use the property for. The team does not publish a commercial inventory on this website. Use the "),
+          r("contact page", "/contact-us"),
+          r(" or the enquiry path on a residential project page if you are comparing those homes instead."),
+        ],
+      },
+      { type: "h2", text: "Questions first-time buyers ask" },
+      { type: "h3", text: "Is a commercial unit the same as a shop in a mall?" },
+      {
+        type: "p",
+        runs: [
+          r("Not necessarily. The papers have to say what the unit is and how it can be used. Do not rely on the word commercial alone."),
+        ],
+      },
+      { type: "h3", text: "Can I assume a rent from day one?" },
+      {
+        type: "p",
+        runs: [
+          r("Only if a current lease says so, and you have read it. A vacant unit earns nothing until a tenant is in place."),
+        ],
+      },
+      { type: "h3", text: "Does PropPact list commercial projects?" },
+      {
+        type: "p",
+        runs: [
+          r("Not on the "),
+          r("commercial properties page", "/commercial-properties"),
+          r(". Contact the team if you want to discuss a requirement. Published residential projects are listed separately."),
+        ],
+      },
+      {
+        type: "p",
+        muted: true,
+        runs: [
+          r("Disclaimer: This is general guidance for buyers in Greater Noida West. It is not legal, tax, or investment advice, and it is not a promise of rent, appreciation, or approval. Confirm the papers and the amount payable before you pay."),
+        ],
+      },
     ],
   },
 ];

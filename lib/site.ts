@@ -473,17 +473,16 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "real-estate-price-trends",
-    title: `${SITE.city} Real Estate Price Trends [Year]`,
+    title: `How to Read a Property Price List in ${SITE.city}`,
     excerpt:
-      "Area-wise market movement and what it means for buyers and investors.",
+      "This page does not publish a price index. It explains how to read the dated project lists on PropPact and what still has to be confirmed.",
     image: "/images/hero-home.jpg",
   },
   {
     slug: "commercial-property-first-time-buyers",
-    title:
-      "Commercial Property Investment: What First-Time Buyers Should Know",
+    title: `Commercial Property for First-Time Buyers in ${SITE.city}`,
     excerpt:
-      "Yield, approvals, and location factors every first-time commercial buyer should evaluate.",
+      "What to check before a first commercial purchase: total cost, lease assumptions, occupancy, documents, and risks. No yield is promised.",
     image: "/images/commercial-hero.jpg",
   },
 ];
