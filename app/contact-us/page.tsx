@@ -40,7 +40,9 @@ const socialIcons = {
   Twitter,
 } as const;
 
-const socialLinks = SOCIAL_LINKS.map((link) => ({
+const socialLinks = SOCIAL_LINKS.filter((link) =>
+  link.href.startsWith("http")
+).map((link) => ({
   ...link,
   icon: socialIcons[link.label as keyof typeof socialIcons],
 }));
@@ -99,18 +101,20 @@ export default function ContactPage() {
               </li>
             </ul>
 
-            <div className="flex gap-3 pt-1">
-              {socialLinks.map(({ label, href, icon: Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-white text-primary transition-colors hover:border-accent hover:text-accent"
-                >
-                  <Icon className="h-4 w-4" aria-hidden />
-                </a>
-              ))}
-            </div>
+            {socialLinks.length > 0 ? (
+              <div className="flex gap-3 pt-1">
+                {socialLinks.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-white text-primary transition-colors hover:border-accent hover:text-accent"
+                  >
+                    <Icon className="h-4 w-4" aria-hidden />
+                  </a>
+                ))}
+              </div>
+            ) : null}
 
             <div className="flex flex-wrap gap-3">
               <ContactCTA action="call" />

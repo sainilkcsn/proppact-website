@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /** Official PropPact PNG with alpha (cropped; source /public/Logo.png) */
@@ -45,11 +44,11 @@ export function Logo({
         "inline-flex shrink-0 items-center self-center bg-transparent",
         className
       )}
-      aria-label={`${SITE.name} home`}
+      aria-label="PropPact Realty home"
     >
       <Image
         src={LOGO_SRC}
-        alt="PropPact"
+        alt="PropPact Realty"
         width={LOGO_INTRINSIC.width}
         height={LOGO_INTRINSIC.height}
         priority={priority}

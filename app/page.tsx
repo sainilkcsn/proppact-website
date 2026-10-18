@@ -6,23 +6,25 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { SITE } from "@/lib/site";
 
+const homeDescription = `${SITE.legalName} provides property guidance and residential property options in ${SITE.city}. Current pricing and availability are confirmed with the team.`;
+
 export const metadata: Metadata = {
   title: {
     absolute: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
   },
-  description: SITE.description,
+  description: homeDescription,
   alternates: { canonical: SITE.url },
   openGraph: {
     url: SITE.url,
     siteName: SITE.legalName,
     title: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
-    description: SITE.description,
+    description: homeDescription,
     images: [{ url: "/images/hero-home.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
-    description: SITE.description,
+    description: homeDescription,
   },
 };
 

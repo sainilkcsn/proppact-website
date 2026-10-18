@@ -39,14 +39,16 @@ export function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="font-heading text-4xl font-semibold leading-[1.1] text-primary-foreground sm:text-5xl lg:text-6xl">
-            Find Your Perfect Property in {SITE.city} with PropPact
+          <p className="text-sm font-medium tracking-wide text-primary-foreground/80 sm:text-base">
+            {SITE.legalName}
+          </p>
+          <h1 className="mt-3 font-heading text-4xl font-semibold leading-[1.1] text-primary-foreground sm:text-5xl lg:text-6xl">
+            Property guidance and residential property options in {SITE.city}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
             Explore residential apartments, duplex villas and selected
-            residential projects across Greater Noida West. Get project
-            information, available configurations and pricing guidance from the
-            PropPact team.
+            residential projects. Current pricing, configurations and
+            availability are confirmed with the PropPact Realty team.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="/projects" variant="onDark" size="lg">

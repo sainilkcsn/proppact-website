@@ -21,6 +21,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
+  applicationName: SITE.legalName,
   title: {
     default: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
     template: `%s | PropPact`,

@@ -93,7 +93,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(peopleSchema) }}
       />
       <PageHero
-        title="About PropPact Realty"
+        title="About PropPact Realty Pvt Ltd"
         description="PropPact Realty is focused on helping people explore property opportunities with greater clarity and confidence."
         imageSrc="/images/about-hero.jpg"
         imageAlt="Residential architecture associated with PropPact Realty"

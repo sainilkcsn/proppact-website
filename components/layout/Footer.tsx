@@ -26,7 +26,9 @@ const socialIcons = {
   Twitter,
 } as const;
 
-const socialLinks = SOCIAL_LINKS.map((link) => ({
+const socialLinks = SOCIAL_LINKS.filter((link) =>
+  link.href.startsWith("http")
+).map((link) => ({
   ...link,
   icon: socialIcons[link.label as keyof typeof socialIcons],
 }));
@@ -41,7 +43,8 @@ export function Footer() {
           <div className="space-y-4">
             <Logo height={LOGO_HEIGHT.footer} />
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              {SITE.description}
+              {SITE.legalName} provides property guidance and residential
+              property options in {SITE.city}.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -81,18 +84,20 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-3 pt-1">
-              {socialLinks.map(({ label, href, icon: Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background text-primary transition-colors hover:border-accent hover:text-accent"
-                >
-                  <Icon className="h-4 w-4" aria-hidden />
-                </a>
-              ))}
-            </div>
+            {socialLinks.length > 0 ? (
+              <div className="flex gap-3 pt-1">
+                {socialLinks.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background text-primary transition-colors hover:border-accent hover:text-accent"
+                  >
+                    <Icon className="h-4 w-4" aria-hidden />
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </div>
 
           <div>
@@ -154,7 +159,7 @@ export function Footer() {
       <div className="border-t border-border/80">
         <Container className="flex flex-col gap-3 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {SITE.name}. All rights reserved.
+            © {year} {SITE.legalName}. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4">
             {LEGAL_LINKS.map((item) => (
