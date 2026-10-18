@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileContactBar } from "@/components/layout/MobileContactBar";
+import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { SITE } from "@/lib/site";
 import "./globals.css";
@@ -63,6 +64,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <MobileContactBar />
+        <SiteAnalytics />
       </body>
     </html>
   );
