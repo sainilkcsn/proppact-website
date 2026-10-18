@@ -52,6 +52,27 @@ const founders = [
   },
 ];
 
+const experiencePoints = [
+  {
+    number: "01",
+    title: "Transparency",
+    description:
+      "We encourage customers to ask questions and seek clarity on relevant property details, pricing and availability.",
+  },
+  {
+    number: "02",
+    title: "Customer Focus",
+    description:
+      "We recognise that every property search begins with individual needs, priorities and circumstances.",
+  },
+  {
+    number: "03",
+    title: "Informed Decisions",
+    description:
+      "We encourage buyers to compare options, understand the costs and verify relevant documents before committing.",
+  },
+];
+
 const principles = [
   {
     title: "Transparency",
@@ -95,8 +116,6 @@ export default function AboutPage() {
       <PageHero
         title="About PropPact Realty Pvt Ltd"
         description="PropPact Realty is focused on helping people explore property opportunities with greater clarity and confidence."
-        imageSrc="/images/about-hero.jpg"
-        imageAlt="Residential architecture associated with PropPact Realty"
       />
 
       <section className="bg-[#F8F7F4] py-14 sm:py-16">
@@ -113,36 +132,66 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-14 sm:py-16">
-        <Container className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/about-hero.jpg"
-              alt="Residential building exterior"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <h2 className="font-heading text-3xl font-semibold text-primary sm:text-4xl">
-              Built on Experience. Focused on People.
-            </h2>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
+        <Container>
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-0">
+            <div className="lg:border-r lg:border-[#003c00]/15 lg:pr-14 xl:pr-20">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4c8b2e]">
+                Our Experience
+              </p>
+              <div className="mt-5 flex items-center gap-3" aria-hidden>
+                <span className="h-px w-14 bg-[#6b3500]" />
+                <span className="h-2 w-2 rotate-45 border border-[#4c8b2e]" />
+              </div>
+              <h2 className="mt-6 max-w-md text-balance font-heading text-4xl font-semibold leading-[1.12] text-[#003c00] sm:text-5xl">
+                Built on Experience. Focused on People.
+              </h2>
+            </div>
+            <div className="max-w-xl space-y-4 text-base leading-relaxed text-[#1A1A1A] lg:max-w-none lg:pl-14 lg:pt-12 xl:pl-20">
               <p>
-                The founders of PropPact Realty have been working in the real estate business for over a decade. Their experience has shaped the way we approach property discovery, customer conversations and the importance of understanding a buyer&apos;s individual requirements.
+                The founders of PropPact Realty have been working in the real estate business for over a decade. Their experience has shaped our approach to property discovery, customer conversations and the importance of understanding each buyer&apos;s requirements.
               </p>
               <p>
-                We recognise that purchasing or selling property is a significant decision. Every customer has different priorities, whether they are searching for a family home, comparing residential configurations or exploring a property opportunity for the future.
+                We recognise that purchasing or selling property is a significant decision. Every customer has different priorities, whether they are searching for a family home, comparing residential configurations or exploring property opportunities for the future.
               </p>
               <p>
                 At PropPact, we aim to make those decisions easier to navigate by helping customers explore their options, ask informed questions and seek clarity on property details, pricing and availability.
               </p>
               <p>
-                We believe that lasting relationships are built through clear communication, realistic expectations and a customer-focused approach.
+                We believe lasting relationships are built through clear communication, realistic expectations and a customer-focused approach.
               </p>
             </div>
           </div>
+
+          <div className="mt-14 flex flex-col gap-4 border-y border-[#003c00]/15 py-8 sm:mt-16 sm:flex-row sm:items-center sm:gap-8">
+            <p className="font-heading text-5xl font-semibold leading-none text-[#003c00] sm:text-6xl">
+              10+
+              <span className="ml-2 text-2xl font-medium text-[#4c8b2e] sm:text-3xl">
+                years
+              </span>
+            </p>
+            <div className="sm:border-l sm:border-[#4c8b2e] sm:pl-8">
+              <p className="max-w-xs text-sm font-medium uppercase tracking-[0.12em] text-[#6b3500]">
+                Real Estate Experience Across Our Founding Team
+              </p>
+            </div>
+          </div>
+
+          <ol className="mt-10 grid gap-8 sm:mt-12 lg:grid-cols-3 lg:gap-10">
+            {experiencePoints.map((point) => (
+              <li key={point.number} className="border-t border-[#003c00]/15 pt-5">
+                <p className="font-heading text-sm font-semibold tracking-[0.16em] text-[#4c8b2e]">
+                  {point.number}
+                </p>
+                <h3 className="mt-3 font-heading text-xl font-semibold text-[#003c00]">
+                  {point.title}
+                </h3>
+                <p className="mt-2 max-w-sm text-sm leading-relaxed text-[#1A1A1A]/80">
+                  {point.description}
+                </p>
+              </li>
+            ))}
+          </ol>
         </Container>
       </section>
 
