@@ -8,6 +8,7 @@ export function projectWhatsappMessage(projectName: string) {
 
 export const SITE = {
   name: "PropPact",
+  legalName: "PropPact Realty Pvt Ltd",
   city: "Greater Noida West",
   tagline: "Property discovery and advisory in Greater Noida West",
   description:

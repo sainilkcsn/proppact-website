@@ -85,11 +85,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     url: `${SITE.url}/blog/${post.slug}`,
     author: {
       "@type": "Organization",
-      name: SITE.name,
+      name: SITE.legalName,
     },
     publisher: {
       "@type": "Organization",
-      name: SITE.name,
+      name: SITE.legalName,
       url: SITE.url,
     },
   };

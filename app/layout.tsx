@@ -22,7 +22,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `PropPact | Residential Projects in ${SITE.city}`,
+    default: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
     template: `%s | PropPact`,
   },
   description: SITE.description,
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: SITE.url,
-    siteName: SITE.name,
-    title: `PropPact | Residential Projects in ${SITE.city}`,
+    siteName: SITE.legalName,
+    title: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
     description: SITE.description,
     images: [{ url: "/images/hero-home.jpg", alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `PropPact | Property in ${SITE.city}`,
+    title: `${SITE.legalName} | Residential Projects in ${SITE.city}`,
     description: SITE.description,
     images: ["/images/hero-home.jpg"],
   },
