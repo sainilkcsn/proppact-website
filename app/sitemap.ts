@@ -1,6 +1,7 @@
 import { SITE } from "@/lib/site";
 import { PROJECTS } from "@/lib/projects-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { GALLERY_ALBUMS } from "@/lib/gallery-data";
 
 export default function sitemap() {
   const staticRoutes = [
@@ -14,6 +15,7 @@ export default function sitemap() {
     "/sell-your-property",
     "/services",
     "/blog",
+    "/photo-gallery",
     "/testimonials",
     "/faq",
     "/contact-us",
@@ -34,6 +36,13 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
+  const galleryRoutes = GALLERY_ALBUMS.map((album) => ({
+    url: `${SITE.url}/photo-gallery/${album.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+    images: album.photos.map((photo) => `${SITE.url}${photo.image}`),
+  }));
+
   return [
     ...staticRoutes.map((route) => ({
       url: `${SITE.url}${route}`,
@@ -42,5 +51,6 @@ export default function sitemap() {
     })),
     ...projectRoutes,
     ...blogRoutes,
+    ...galleryRoutes,
   ];
 }

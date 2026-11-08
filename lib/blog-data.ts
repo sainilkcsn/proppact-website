@@ -5,7 +5,8 @@ export type BlogCategory =
   | "Buying Guides"
   | "Market Updates"
   | "Legal & Documentation"
-  | "Investment";
+  | "Investment"
+  | "Company Updates";
 
 export type BlogRun = {
   text: string;
@@ -44,6 +45,7 @@ export const BLOG_CATEGORIES: Array<BlogCategory | "All"> = [
   "Market Updates",
   "Legal & Documentation",
   "Investment",
+  "Company Updates",
 ];
 
 /** Editorial placeholders for PropPact resources — expand with full articles over time. */
@@ -59,6 +61,115 @@ const madhavMaps = getPropertyMapLinks(getProjectBySlug("madhav-kunj")!);
 const rudranshMaps = getPropertyMapLinks(getProjectBySlug("rudransh-urban-vista")!);
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "diwali-2026-proppact-realty",
+    title: "Diwali 2026 at PropPact Realty: A Celebration of Light and Togetherness",
+    excerpt:
+      "A look at PropPact Realty's Diwali 2026 celebration through photographs of festive attire, office decorations and gift exchanges at the PropPact office.",
+    category: "Company Updates",
+    date: "2026-11-08",
+    dateLabel: "8 Nov 2026",
+    image: "/images/gallery/diwali-2026/proppact-diwali-2026-team-office-gathering.jpg",
+    imageAlt:
+      "PropPact Realty team gathered in the office for Diwali 2026 with festive gift bags nearby",
+    seoTitle: "Diwali Celebration 2026 at PropPact Realty | Festive Moments",
+    seoDescription:
+      "Take a look at PropPact Realty's Diwali 2026 celebration through photographs and a story about the people and spirit behind our business.",
+    content: [],
+    blocks: [
+      {
+        type: "p",
+        runs: [
+          r(
+            "Diwali is a festival of light, warmth and shared celebration. At PropPact Realty, the 2026 Diwali gathering brought the team together at the office in festive attire, with marigold decorations at the entrance and gift exchanges that marked the occasion."
+          ),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "Behind every property conversation is a group of people who spend their days helping buyers explore options with greater clarity. Moments like Diwali remind us that lasting relationships — with customers and with one another — grow through clear communication, realistic expectations and time spent together."
+          ),
+        ],
+      },
+      {
+        type: "h2",
+        text: "What the photographs show",
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "The photographs from the day capture colleagues in traditional kurtas, sarees and festive outfits. Many team members wear PropPact identity lanyards. Outside the office, marigold garlands and coloured fabric streamers mark the entrance, with Yuvraj Villa project posters visible on the glass doors."
+          ),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "Inside, colleagues exchange festive gift sets that include PropPact tote bags and Bikano Uphaar boxes. Other images show team members posing together in colourful kurtas, a festive presentation moment, and a group seated in the office corridor with rows of gift bags prepared along the wall."
+          ),
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/gallery/diwali-2026/proppact-diwali-2026-team-office-entrance.jpg",
+        alt: "Three PropPact colleagues in festive attire standing outside the marigold-decorated office entrance during Diwali 2026",
+      },
+      {
+        type: "h2",
+        text: "Browse the Diwali 2026 photo gallery",
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "The full set of published photographs is available in the PropPact Photo Gallery. You can open each image in a larger view, read the captions and move through the album at your own pace."
+          ),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "View the Complete Diwali 2026 Photo Gallery",
+            "/photo-gallery/diwali-2026",
+            true
+          ),
+          r("."),
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/gallery/diwali-2026/proppact-diwali-2026-gift-exchange-magenta-kurta.jpg",
+        alt: "Two PropPact colleagues in festive kurtas holding a PropPact tote bag and Bikano Uphaar gift box",
+      },
+      {
+        type: "h2",
+        text: "A closing note from PropPact Realty",
+      },
+      {
+        type: "p",
+        runs: [
+          r(
+            "PropPact Realty wishes everyone a Diwali filled with light, good health and togetherness. We remain focused on helping people explore residential property options in Greater Noida West with practical guidance and a people-first approach — today and throughout the year."
+          ),
+        ],
+      },
+      {
+        type: "p",
+        runs: [
+          r("Explore more albums in the "),
+          r("Photo Gallery", "/photo-gallery"),
+          r(", or "),
+          r("contact PropPact", "/contact-us"),
+          r(" if you would like to speak with the team about a property requirement."),
+        ],
+      },
+    ],
+  },
   {
     slug: "rudransh-urban-vista-greater-noida-west",
     title:

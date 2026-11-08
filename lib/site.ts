@@ -77,6 +77,7 @@ export const SERVICES_NAV_LINKS: NavItem[] = [
 
 export const INSIGHTS_LINKS: NavItem[] = [
   { label: "Blog", href: "/blog" },
+  { label: "Photo Gallery", href: "/photo-gallery" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
 ];
@@ -87,6 +88,7 @@ export const FOOTER_QUICK_LINKS: NavItem[] = [
   { label: "Sell Your Property", href: "/sell-your-property" },
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
+  { label: "Photo Gallery", href: "/photo-gallery" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact-us" },
@@ -413,6 +415,13 @@ export type BlogPost = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "diwali-2026-proppact-realty",
+    title: "Diwali 2026 at PropPact Realty: A Celebration of Light and Togetherness",
+    excerpt:
+      "A look at PropPact Realty's Diwali 2026 celebration through photographs of festive attire, office decorations and gift exchanges at the PropPact office.",
+    image: "/images/gallery/diwali-2026/proppact-diwali-2026-team-office-gathering.jpg",
+  },
   {
     slug: "rudransh-urban-vista-greater-noida-west",
     title:
