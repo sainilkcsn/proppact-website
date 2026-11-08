@@ -87,7 +87,7 @@ export default function Diwali2026AlbumPage() {
 
       <PageHero
         title="Diwali 2026"
-        description="Celebrate the spirit of Diwali with PropPact Realty through a collection of photographs capturing festive moments, decorations and togetherness."
+        description="A collection of photographs from PropPact Realty's office Diwali celebration — festive moments, decorations and time spent together."
       />
 
       <section className="bg-[#F8F7F4] py-10 sm:py-12">
@@ -100,8 +100,8 @@ export default function Diwali2026AlbumPage() {
             ]}
           />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-[#1A1A1A]">
-            {album.description} This album includes {album.photos.length}{" "}
-            photographs from the celebration at the PropPact office.
+            {album.description} Browse {album.photos.length} photographs from
+            the day.
           </p>
           {album.blogSlug ? (
             <p className="mt-4 text-sm text-muted-foreground">

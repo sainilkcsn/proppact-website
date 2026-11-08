@@ -65,7 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "diwali-2026-proppact-realty",
     title: "Diwali 2026 at PropPact Realty: A Celebration of Light and Togetherness",
     excerpt:
-      "A look at PropPact Realty's Diwali 2026 celebration through photographs of festive attire, office decorations and gift exchanges at the PropPact office.",
+      "This year's Diwali celebration brought a festive mood to our office. Here's a look at the photographs and memories from the day.",
     category: "Company Updates",
     date: "2026-11-08",
     dateLabel: "8 Nov 2026",
@@ -81,7 +81,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "Diwali is a festival of light, warmth and shared celebration. At PropPact Realty, the 2026 Diwali gathering brought the team together at the office in festive attire, with marigold decorations at the entrance and gift exchanges that marked the occasion."
+            "This year's Diwali celebration brought a festive mood to our office. Team members arrived in traditional outfits, exchanged gifts and spent time together — a welcome pause from the usual day of property conversations and site visits."
           ),
         ],
       },
@@ -89,7 +89,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "Behind every property conversation is a group of people who spend their days helping buyers explore options with greater clarity. Moments like Diwali remind us that lasting relationships — with customers and with one another — grow through clear communication, realistic expectations and time spent together."
+            "PropPact Realty is built around people: the team who support buyers every day, and the relationships we try to keep clear and practical. Diwali is one of those occasions when that side of the business is easiest to see."
           ),
         ],
       },
@@ -101,7 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "The photographs from the day capture colleagues in traditional kurtas, sarees and festive outfits. Many team members wear PropPact identity lanyards. Outside the office, marigold garlands and coloured fabric streamers mark the entrance, with Yuvraj Villa project posters visible on the glass doors."
+            "The photographs show colleagues in kurtas, sarees and other festive clothing. Outside, marigold garlands and coloured streamers decorated the office entrance, with Yuvraj Villa posters visible on the glass. Inside, gift exchanges were a recurring scene — PropPact tote bags and festive hampers passed between team members."
           ),
         ],
       },
@@ -109,7 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "Inside, colleagues exchange festive gift sets that include PropPact tote bags and Bikano Uphaar boxes. Other images show team members posing together in colourful kurtas, a festive presentation moment, and a group seated in the office corridor with rows of gift bags prepared along the wall."
+            "Other frames capture quieter moments: a small presentation, group photographs in colourful kurtas, and the team seated together in the corridor with gift bags lined along the wall."
           ),
         ],
       },
@@ -126,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "The full set of published photographs is available in the PropPact Photo Gallery. You can open each image in a larger view, read the captions and move through the album at your own pace."
+            "We have put the full set of published photographs into our Photo Gallery. Open any image for a larger view, read the captions, and move through the album at your own pace."
           ),
         ],
       },
@@ -154,18 +154,18 @@ export const BLOG_POSTS: BlogPost[] = [
         type: "p",
         runs: [
           r(
-            "PropPact Realty wishes everyone a Diwali filled with light, good health and togetherness. We remain focused on helping people explore residential property options in Greater Noida West with practical guidance and a people-first approach — today and throughout the year."
+            "We hope you enjoy these memories from our office Diwali. From all of us at PropPact Realty — warm wishes for a Diwali filled with light, good health and togetherness. When you are ready to talk about a home or investment in Greater Noida West, we are here to help."
           ),
         ],
       },
       {
         type: "p",
         runs: [
-          r("Explore more albums in the "),
+          r("Browse more albums in the "),
           r("Photo Gallery", "/photo-gallery"),
           r(", or "),
           r("contact PropPact", "/contact-us"),
-          r(" if you would like to speak with the team about a property requirement."),
+          r(" if you would like to speak with the team."),
         ],
       },
     ],

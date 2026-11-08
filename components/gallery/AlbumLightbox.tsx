@@ -13,6 +13,7 @@ type AlbumLightboxProps = {
 
 export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
   const [index, setIndex] = useState<number | null>(null);
+  const [failed, setFailed] = useState<Record<string, boolean>>({});
   const touchStartX = useRef<number | null>(null);
   const open = index !== null;
   const current = index !== null ? photos[index] : null;
@@ -47,7 +48,7 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
 
   return (
     <>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 lg:gap-5">
         {photos.map((photo, photoIndex) => (
           <button
             key={photo.id}
@@ -56,24 +57,31 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
             className="group overflow-hidden rounded-lg border border-border bg-white text-left shadow-card transition-shadow hover:shadow-soft"
             aria-label={`Open ${photo.title}`}
           >
-            <div
-              className="relative w-full overflow-hidden bg-[#F1EFE9]"
-              style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
-            >
-              <Image
-                src={photo.image}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                loading={photoIndex < 6 ? "eager" : "lazy"}
-              />
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#F1EFE9]">
+              {failed[photo.id] ? (
+                <div className="absolute inset-0 flex items-center justify-center px-3 text-center text-xs text-muted-foreground">
+                  Photograph unavailable
+                </div>
+              ) : (
+                <Image
+                  src={photo.image}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading={photoIndex < 4 ? "eager" : "lazy"}
+                  priority={photoIndex < 2}
+                  onError={() =>
+                    setFailed((prev) => ({ ...prev, [photo.id]: true }))
+                  }
+                />
+              )}
             </div>
-            <div className="space-y-1 p-4">
-              <h3 className="font-heading text-base font-semibold text-primary">
+            <div className="space-y-1 p-3 sm:p-4">
+              <h3 className="font-heading text-sm font-semibold leading-snug text-primary sm:text-base">
                 {photo.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
                 {photo.caption}
               </p>
             </div>
@@ -128,7 +136,8 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
             }}
             onTouchEnd={(event) => {
               if (touchStartX.current === null) return;
-              const delta = (event.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+              const delta =
+                (event.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
               touchStartX.current = null;
               if (Math.abs(delta) < 50) return;
               go(delta < 0 ? 1 : -1);
@@ -137,7 +146,9 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
             <div
               className={cn(
                 "relative w-full max-h-[72vh] overflow-hidden rounded-lg bg-black/20",
-                current.width >= current.height ? "aspect-[4/3]" : "aspect-[3/4]"
+                current.width >= current.height
+                  ? "aspect-[4/3]"
+                  : "aspect-[3/4]"
               )}
             >
               <Image
@@ -149,9 +160,13 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
                 priority
               />
             </div>
-            <div className="max-w-2xl text-center text-primary-foreground">
-              <p className="font-heading text-lg font-semibold">{current.title}</p>
-              <p className="mt-1 text-sm text-primary-foreground/85">{current.caption}</p>
+            <div className="max-w-2xl px-2 text-center text-primary-foreground">
+              <p className="font-heading text-lg font-semibold">
+                {current.title}
+              </p>
+              <p className="mt-1 text-sm text-primary-foreground/85">
+                {current.caption}
+              </p>
               <p className="mt-2 text-xs uppercase tracking-[0.14em] text-primary-foreground/70">
                 {(index ?? 0) + 1} / {photos.length}
               </p>
