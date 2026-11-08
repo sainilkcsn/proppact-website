@@ -54,8 +54,8 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
             key={photo.id}
             type="button"
             onClick={() => setIndex(photoIndex)}
-            className="group overflow-hidden rounded-lg border border-border bg-white text-left shadow-card transition-shadow hover:shadow-soft"
-            aria-label={`Open ${photo.title}`}
+            className="group overflow-hidden rounded-lg border border-border bg-white shadow-card transition-shadow hover:shadow-soft"
+            aria-label={`Open photograph ${photoIndex + 1} of ${photos.length}`}
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#F1EFE9]">
               {failed[photo.id] ? (
@@ -76,14 +76,6 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
                   }
                 />
               )}
-            </div>
-            <div className="space-y-1 p-3 sm:p-4">
-              <h3 className="font-heading text-sm font-semibold leading-snug text-primary sm:text-base">
-                {photo.title}
-              </h3>
-              <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                {photo.caption}
-              </p>
             </div>
           </button>
         ))}
@@ -160,17 +152,9 @@ export function AlbumLightbox({ photos, albumTitle }: AlbumLightboxProps) {
                 priority
               />
             </div>
-            <div className="max-w-2xl px-2 text-center text-primary-foreground">
-              <p className="font-heading text-lg font-semibold">
-                {current.title}
-              </p>
-              <p className="mt-1 text-sm text-primary-foreground/85">
-                {current.caption}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.14em] text-primary-foreground/70">
-                {(index ?? 0) + 1} / {photos.length}
-              </p>
-            </div>
+            <p className="text-xs uppercase tracking-[0.14em] text-primary-foreground/80">
+              {(index ?? 0) + 1} / {photos.length}
+            </p>
           </div>
         </div>
       ) : null}
